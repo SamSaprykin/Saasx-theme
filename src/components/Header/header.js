@@ -18,13 +18,13 @@ const Header = () => (
                           <li><Link to="/features">Features</Link></li>
                           <li><Link to="/projects">Projects</Link> 
                               <ul>
-                                  <li><a href="projects.single.html">Projects Single</a></li>
+                                  <li><Link to="/project-page">Projects Single</Link></li>
                               </ul>
                           </li>
                           <li><a href="#">Pages</a> 
                               <ul>
-                                  <li><a href="team.html">Our Team</a></li>
-                                  <li><a href="pricing.html">Pricing Table</a></li>
+                                  <li><Link to="/our-team">Our Team</Link></li>
+                                  <li><Link to="/pricing-table">Pricing Table</Link></li>
                                   <li><a href="404.html">404 Error</a></li>
                               </ul>
                           </li>

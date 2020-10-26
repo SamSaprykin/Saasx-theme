@@ -6,14 +6,15 @@ import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader/pageHeader"
 import CtaSection from "../components/CtaSection/ctaSection"
 import ProjectsListing from "../components/ProjectsListing/projectsListing"
+import TeamListing from "../components/TeamListing/teamListing"
 
-const ProjectListing = () => (
+const OurTeam = () => (
   <Layout>
     <SEO title="Home" />
     <PageHeader />
-    <ProjectsListing />
+    <TeamListing />
     <CtaSection />
   </Layout>
 )
 
-export default ProjectListing
+export default OurTeam

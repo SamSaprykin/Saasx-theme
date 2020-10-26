@@ -6,9 +6,9 @@ import "./pageHeader.css"
 
 const PageHeader = () => (
     <>
-      <section class="page-header padding">
-		    <div class="container">
-		        <div class="page-content text-center">
+      <section className="page-header padding">
+		    <div className="container">
+		        <div className="page-content text-center">
 		            <h2>About Us</h2>
 		            <p>Saas startup html template.</p>
 		        </div>

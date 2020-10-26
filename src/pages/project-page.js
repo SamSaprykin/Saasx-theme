@@ -4,16 +4,18 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader/pageHeader"
+import ProjectContent from "../components/ProjectContent/projectContent"
+import ProjectSkills from "../components/ProjectSkills/projectSkills"
 import CtaSection from "../components/CtaSection/ctaSection"
-import ProjectsListing from "../components/ProjectsListing/projectsListing"
 
-const ProjectListing = () => (
+const ProjectPage = () => (
   <Layout>
     <SEO title="Home" />
     <PageHeader />
-    <ProjectsListing />
+    <ProjectContent />
+    <ProjectSkills />
     <CtaSection />
   </Layout>
 )
 
-export default ProjectListing
+export default ProjectPage

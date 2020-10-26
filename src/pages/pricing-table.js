@@ -5,15 +5,17 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader/pageHeader"
 import CtaSection from "../components/CtaSection/ctaSection"
-import ProjectsListing from "../components/ProjectsListing/projectsListing"
+import PricingTable from "../components/PricingTable/pricingTable"
+import MoneyBackSection from "../components/MoneyBackSection/moneyBackSection"
 
-const ProjectListing = () => (
+const PricingPage = () => (
   <Layout>
     <SEO title="Home" />
     <PageHeader />
-    <ProjectsListing />
+    <PricingTable />
+    <MoneyBackSection />
     <CtaSection />
   </Layout>
 )
 
-export default ProjectListing
+export default PricingPage
