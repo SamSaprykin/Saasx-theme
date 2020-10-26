@@ -1,0 +1,42 @@
+.content-section{ position: relative; }
+.contant-wrap{}
+.content-item{
+    padding-left: 80px;
+}
+.content-item h2{
+    margin: 0 0 20px;
+}
+.content-item p{
+    margin-bottom: 20px;
+}
+.content-img{
+    background-image: url(https://via.placeholder.com/980x500.png?text=SaasX);
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: '';
+    height: 70%;
+    width: 1088px;
+    top: auto;
+    left: -50px;
+}
+.content-list{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content-list li{
+    line-height: 35px;
+}
+.content-list li i{
+    color: #2550de;
+    font-size: 15px;
+}
+.content-list li span{
+    color: #263a4f;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.btn-content {
+    margin-top:18px;
+}
