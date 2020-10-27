@@ -9,15 +9,16 @@
 .content-item p{
     margin-bottom: 20px;
 }
-.content-img{
-    background-image: url(https://via.placeholder.com/980x500.png?text=SaasX);
-    background-size: contain;
-    background-position: top left;
-    background-repeat: no-repeat;
+
+.image-wrapper {
+    position: relative;
+}
+.image-content{
     position: absolute;
     content: '';
-    height: 70%;
-    width: 1088px;
+    height: auto;
+    width:100%;
+    max-width: 760px;
     top: auto;
     left: -50px;
 }

@@ -25,17 +25,17 @@ const Header = () => (
                               <ul>
                                   <li><Link to="/our-team">Our Team</Link></li>
                                   <li><Link to="/pricing-table">Pricing Table</Link></li>
-                                  <li><a href="404.html">404 Error</a></li>
+                                  <li><Link to="/404">404 Error</Link></li>
                               </ul>
                           </li>
                           <li><a href="#">Blog</a> 
                               <ul>
-                                  <li><a href="blog-grid.html">Blog Grid</a></li>
-                                  <li><a href="blog-classic.html">Blog Classic</a></li>
-                                  <li><a href="blog-single.html">Blog Single</a></li>
+                                  <li><Link to="/blog-listing">Blog Grid</Link></li>
+                                  <li><Link to="/blog-classic">Blog Classic</Link></li>
+                                  <li><Link to="/blog-post">Blog Single</Link></li>
                               </ul>
                           </li>
-                          <li><a href="contact.html">Contact</a></li>
+                          <li><Link to="/contact">Contact</Link></li>
                       </ul>
                   </div>
                   <div className="header-btn">

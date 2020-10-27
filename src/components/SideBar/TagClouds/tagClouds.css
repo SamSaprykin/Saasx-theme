@@ -1,0 +1,23 @@
+.widget-content .tags{}
+.widget-content .tags li{
+    display: inline-block;
+}
+.widget-content .tags li a{
+    display: inline-block;
+    background-color: #2550de;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    margin: 3px;
+}
+.widget-content .tags li a:hover{
+    background-color: #263a4f;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.widget-content h4{
+    font-weight: 600;
+}
