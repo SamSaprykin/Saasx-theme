@@ -101,7 +101,7 @@ const Navbox = styled.div`
     height: 100vh;
     width: 100%;
     background-color: #fff;
-    top: ${props => (props.open ? "0" : "-100vh")};
+    top: ${props => (props.open ? "-100vh" : "0")};
   }
 `
 
@@ -212,7 +212,7 @@ const HeaderContainer = styled.div`
         max-width: 750px;
     }
     @media (min-width: 992px) {
-        max-width: 970px;
+        max-width: 1070px;
     }
     @media (min-width: 1200px) {
         max-width: 1140px;
