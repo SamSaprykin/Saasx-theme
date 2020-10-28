@@ -8,7 +8,7 @@ import BlogGrid from "../components/BlogGrid/blogGrid"
 import SideBar from "../components/SideBar/sideBar"
 
 const BlogListing = props => {
-  console.log(props.data.allContentfulBlogPost.edges)
+  
   const postsData = props.data.allContentfulBlogPost.edges
   return (
   <Layout>

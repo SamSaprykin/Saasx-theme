@@ -14,7 +14,7 @@ const BlogClassic = () => (
     <section className="blog-section padding">
 		    <div className="container">
 		        <div className="blog-wrap row">
-              <BlogGrid classic="true" paginationPosition="left" />
+              
               <SideBar />
             </div>
         </div>

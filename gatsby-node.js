@@ -72,8 +72,8 @@ exports.createPages = async ({ graphql, actions }) => {
           createPage({
             path:
               k === 0
-                ? `/read/${newCat.toLowerCase()}`
-                : `/read/${newCat.toLowerCase()}/${k + 1}`,
+                ? `/blog/${newCat.toLowerCase()}`
+                : `/blog/${newCat.toLowerCase()}/${k + 1}`,
             component: path.resolve(`./src/templates/blog-category-listing.js`),
             context: {
               limit: blogCardsPerPage,
@@ -82,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
               currentPage: k + 1,
               categoryList: blogCategoryList,
               category,
-              slugPrefix: `/read/${newCat.toLowerCase()}`,
+              slugPrefix: `/blog/${newCat.toLowerCase()}`,
             },
           })
         })
