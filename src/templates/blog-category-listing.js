@@ -7,7 +7,7 @@ import PageHeader from "../components/PageHeader/pageHeader"
 import BlogGrid from "../components/BlogGrid/blogGrid"
 import SideBar from "../components/SideBar/sideBar"
 
-const BlogListing = () => (
+const BlogCategoryListing = () => (
   <Layout>
     <SEO title="Home" />
     <PageHeader />
@@ -22,4 +22,4 @@ const BlogListing = () => (
   </Layout>
 )
 
-export default BlogListing
+export default BlogCategoryListing

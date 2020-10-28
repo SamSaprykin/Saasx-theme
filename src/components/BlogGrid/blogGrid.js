@@ -3,96 +3,41 @@ import PropTypes from "prop-types"
 import React from "react"
 import BlogPagination from "../BlogPagination/blogPagination"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
-const BlogGrid = ({classic,paginationPosition}) => {
+const BlogGrid = ({classic,paginationPosition,postsData}) => {
     let columnSize 
     if(classic) {
         columnSize = "lg-12"
     } else {
         columnSize = "sm-6"
     }
+    console.log(postsData)
     return (
         <>
         <div className="col-lg-8 sm-padding">
             <div className="row">
-                <div className={`col-${columnSize} padding-15`}>
+            { postsData.map(card => {
+            return (
+                <div className={`col-${columnSize} padding-15`} >
                     <BlogItem>
                         <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">interior</a></Category>
+                            <Img fluid={card.node.blogPostBody.blogThumbnail.fluid} alt="post" />
+                            <Category>{card.node.categories.map(category =>{ 
+                            return(
+                                <a href="#">{category}</a>
+                            )})}</Category>
                         </BlogTumb>
                         <BlogContent>
-                            <h3><a href="#">Minimalist trending in modern architecture 2019</a></h3>
+                            <h3><a href="#">{card.node.blogPostBody.blogPostTitle}</a></h3>
                             <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
                             <a href="#" className="read-more">Read More</a>
                         </BlogContent>
                     </BlogItem>
                 </div>
-                <div className={`col-${columnSize} padding-15`}>
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Architecture</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">Terrace in the town yamazaki kentaro design workshop.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-                <div className={`col-${columnSize} padding-15`}>
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Design</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">W270 house são paulo arquitetos fabio jorge architeqture.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-                <div className={`col-${columnSize} padding-15`}>
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Design</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">Lascaux IV  snøhetta duncan lewis scape architecture.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-                <div className={`col-${columnSize} padding-15`}>
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Design</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">Tai kwun centre for heritage de national meuron.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-                <div className={`col-${columnSize} padding-15`}>
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Design</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">National memorial buildings for peace and justice.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
+            )
+            })}
+                
             </div>
             <BlogPagination position={paginationPosition} />
         </div>      
