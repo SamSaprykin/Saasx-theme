@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./sideBar.css"
+
+import styled from "styled-components"
 
 import SearchSidebar from "./SearchSidebar/searchSidebar"
 import Categories from "./Categories/categories"
@@ -11,15 +12,19 @@ import TagClouds from "./TagClouds/tagClouds"
 const SideBar = () => (
   <>
     <div className="col-lg-4 padding-15">
-        <div className="sidebar-wrap">
+        <SidebarWrapper className="sidebar-wrap">
             <SearchSidebar />
             <Categories />
             <RecentPosts />
             <TagClouds />
-        </div>
+        </SidebarWrapper>
     </div>
   </>
 )
+
+const SidebarWrapper = styled.div`
+  padding-left: 40px;
+`
 
 SideBar.propTypes = {
   

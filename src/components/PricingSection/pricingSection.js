@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import "./pricingSection.css"
 
+
 import AnimSide from "../Animation/AnimSide"
 
 const PricingSection = () => (

@@ -3,82 +3,57 @@ import PropTypes from "prop-types"
 import React from "react"
 import "./projectsListing.css"
 
+import TeamMemberCard from "../TeamMemberCard/teamMemberCard"
+
+import styled from "styled-components"
+
 const ProjectsListing = () => (
   <>
-    <section className="project-section padding">
-        <div className="container">
-            <div className="project-wrap row">
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Notepad Mockup</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Folded Paper</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Hot Fruit</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Woman"s Corner</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Oxygen Bottle</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 padding-15">
-                    <div className="project-box">
-                        <img src="https://via.placeholder.com/350x350.png?text=SaasX" alt="port" />
-                        <div className="project-content">
-                            <div className="project-content-inner">
-                                <h3><a href="#">Shocks Mockup</a></h3>
-                                <span>We combine practice of managing and analyzing project management to its full performance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <ProjectSection className="project-section padding">
+        <Container>
+            <ProjectRow>
+                <TeamMemberCard  testPosition="center" />
+                <TeamMemberCard  testPosition="center" />
+                <TeamMemberCard  testPosition="center" />
+                <TeamMemberCard  testPosition="center" />
+            </ProjectRow>
+        </Container>
+    </ProjectSection>
   </>
 )
+
+const ProjectSection = styled.section`
+    padding: 100px 0;
+`
+
+const ProjectRow = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+`
+
+
+const Container = styled.div`
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media (min-width: 768px) {
+        max-width: 750px;
+    }
+    @media (min-width: 992px) {
+        max-width: 970px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+`
 
 ProjectsListing.propTypes = {
   

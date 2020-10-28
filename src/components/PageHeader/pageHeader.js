@@ -1,28 +1,56 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./pageHeader.css"
 
+
+import styled from "styled-components"
 
 const PageHeader = () => (
     <>
-      <section className="page-header padding">
+      <PageHeaderWrapper>
 		    <div className="container">
-		        <div className="page-content text-center">
+		        <PageContent className="page-content text-center">
 		            <h2>About Us</h2>
 		            <p>Saas startup html template.</p>
-		        </div>
+		        </PageContent>
 		    </div>
-      </section>
+      </PageHeaderWrapper>
     </>
-  )
-  
-  PageHeader.propTypes = {
-    
+)
+
+const PageHeaderWrapper = styled.section`
+  padding:100px 0;
+  background-image: url(https://via.placeholder.com/1800x950.png/888888?text=SaasX);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top:80px;
+`
+
+const PageContent = styled.div`
+  text-aling:center;
+  h2 {
+    color: #fff;
+    font-size: 36px;
   }
-  
-  PageHeader.defaultProps = {
-    
+  p {
+    color: #ddd;
+    margin: 0;
   }
+`
   
-  export default PageHeader
+PageHeader.propTypes = {
+  
+}
+
+PageHeader.defaultProps = {
+  
+}
+
+export default PageHeader
