@@ -43,6 +43,9 @@ const HeroSectionWrapper = styled.section`
     background-color: #f9fafa;
     display: flex!important;
     align-items: center!important;
+    @media (max-width: 767px) {
+        height: 350px;
+    }
 `
 
 const Container = styled.div`
@@ -83,6 +86,7 @@ const HeroContent = styled.div`
         font-weight: 600;
         letter-spacing: 0;
         margin: 0;
+        
     }
     h2 {
         font-size: 46px;
@@ -91,6 +95,15 @@ const HeroContent = styled.div`
         margin: 15px 0 25px;
         font-weight: 600;
         letter-spacing: -1px;
+        @media (max-width: 992px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 36px;
+            margin: 0;
+        }
     }
     p {
         margin-bottom: 30px;

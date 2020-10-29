@@ -44,7 +44,7 @@ const FeaturesSection = ({leftSide}) => {
                     <div className={`col-${columnWrapper} sm-padding`}>
                         <div className="row">
                         
-                            <div className={`col-${columnSize} padding-15`}>
+                            <Column className={`col-${columnSize} padding-15`}>
                                 <AnimSide delay="0.1">
                                 <FeatureItem >
                                     <i className="ti-bar-chart"></i>
@@ -53,8 +53,8 @@ const FeaturesSection = ({leftSide}) => {
                                     A simple way to run your business</p>
                                 </FeatureItem>
                                 </AnimSide>
-                            </div>
-                            <div className={`col-${columnSize} padding-15`} >
+                            </Column>
+                            <Column className={`col-${columnSize} padding-15`} >
                                 <AnimSide delay="0.12">
                                 <FeatureItem >
                                     <i className="ti-agenda"></i>
@@ -63,8 +63,8 @@ const FeaturesSection = ({leftSide}) => {
                                     A simple way to run your business</p>
                                 </FeatureItem>
                                 </AnimSide>
-                            </div>
-                            <div className={`col-${columnSize} padding-15`}>
+                            </Column>
+                            <Column className={`col-${columnSize} padding-15`}>
                                 <AnimSide delay="0.14">
                                 <FeatureItem >
                                     <i className="ti-layers-alt"></i>
@@ -72,8 +72,8 @@ const FeaturesSection = ({leftSide}) => {
                                     <p>The business carrent account that is your Accounting software. A simple way to run your business</p>
                                 </FeatureItem>
                                 </AnimSide>
-                            </div>
-                            <div className={`col-${columnSize} padding-15`}>
+                            </Column>
+                            <Column className={`col-${columnSize} padding-15`}>
                                 <AnimSide delay="0.16">
                                 <FeatureItem >
                                     <i className="ti-pie-chart"></i>
@@ -81,7 +81,7 @@ const FeaturesSection = ({leftSide}) => {
                                     <p>The business carrent account that is your Accounting software. A simple way to run your business</p>
                                 </FeatureItem>
                                 </AnimSide>
-                            </div>
+                            </Column>
                         
                         </div>
                     </div>
@@ -96,6 +96,12 @@ const FeaturesSection = ({leftSide}) => {
 const FeaturesSectionWrapper = styled.section`
     padding: 100px 0;
     border-bottom: 1px solid #e5e5e5;
+    @media (max-width: 576px) {
+        text-align:center;
+    }
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
 `
 
 const Container = styled.div`
@@ -110,6 +116,7 @@ const Container = styled.div`
     }
     @media (min-width: 768px) {
         max-width: 750px;
+        
     }
     @media (min-width: 992px) {
         max-width: 970px;
@@ -125,6 +132,19 @@ const FeaturesWrapper = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    
+    
+`
+
+const Column = styled.div`
+    @media (max-width: 768px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @media (max-width: 576px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 `
 
 const FeaturesContent = styled.div`
@@ -146,6 +166,12 @@ const FeaturesContent = styled.div`
     h2{
         font-size: 36px;
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 36px;
+            text-align: center;
+        }
         span{
             color: #111;
         }
@@ -155,6 +181,9 @@ const FeaturesContent = styled.div`
 const ButtonPlay = styled.button`
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+        margin:0 auto;
+    }
     i {
         font-size: 50px;
         color: #007bff;
@@ -184,6 +213,10 @@ const FeatureItem = styled.div`
         color: #007bff;
         margin-bottom: 15px;
         display: block;
+    }
+    @media (max-width: 767px) {
+        text-align: center;
+        padding: 0 40px;
     }
 `
 

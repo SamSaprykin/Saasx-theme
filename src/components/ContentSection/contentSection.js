@@ -36,19 +36,37 @@ const ContentSectionWrapper = styled.section`
   position: relative;
   border-bottom: 1px solid #e5e5e5;
   padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
 `
 const ContentItem = styled.div`
   padding-left: 80px;
   h2{
     margin: 0 0 20px;
+    @media (max-width: 768px) {
+      font-size:22px;
+    }
   }
   p{
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-left: 0;
+    margin:0 auto;
+    max-width:640px;
   }
 `
 
 const ImageWrapper = styled.div`
   position: relative;
+  @media (max-width: 768px) {
+    margin-bottom:32px;
+  }
   .image-content{
     position: absolute;
     content: '';
@@ -57,6 +75,10 @@ const ImageWrapper = styled.div`
     max-width: 760px;
     top: auto;
     left: -50px;
+    @media (max-width: 768px) {
+      display:none;
+      
+    }
   } 
 `
 

@@ -18,8 +18,17 @@ const SponsorSection = () => {
             disableOnInteraction: false,
         },
         breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
             640: {
-              slidesPerView: 2,  
+              slidesPerView: 3,  
             },
             767: {
               slidesPerView: 3,

@@ -111,12 +111,19 @@ const TestimonialSliderWrapper = styled.section`
     .swiper-pagination-bullet-active {
         background-color: #2550de !important;
     }
+    h2 {
+        @media (max-width: 767px)
+         {
+            font-size: 22px;
+            line-height: 36px;
+        }
+    }
 `
 
 const TestimonialItem = styled.div`
     text-align: center;
     padding: 40px 20px;
-    background-color: #f9fafa;
+    background-color: #f9fafa !important;
     img{
         width: 80px;
         height: 80px;

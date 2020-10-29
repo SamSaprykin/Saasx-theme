@@ -53,6 +53,9 @@ const BlogIndex = () => (
 const BlogSection = styled.section`
     padding: 100px 0;
     border-bottom: 1px solid #e5e5e5;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
 `
 
 const Container = styled.div`

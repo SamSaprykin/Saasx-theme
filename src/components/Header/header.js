@@ -68,7 +68,7 @@ const DefaultButton = styled.button`
     -webkit-box-shadow: 0 3px 10px rgba(71, 44, 173, 0.2);
     box-shadow: 0 3px 10px rgba(71, 44, 173, 0.2);
     cursor:pointer;
-    @media (max-width: 400px) {
+    @media (max-width: 440px) {
       display:none;
     }
     :hover{

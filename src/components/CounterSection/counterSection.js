@@ -64,6 +64,10 @@ const CounterSectionWrapper = styled.section`
     padding: 100px 0;
     background-color: #f9fafa;
     box-sizing: border-box;
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    
 `
 
 const Container = styled.div`
@@ -107,11 +111,15 @@ const SectionHeading = styled.div`
         margin-bottom: 10px;
         z-index: 1;
     }
-    h2{
+    h2 {
         margin-bottom: 20px;
     }
-    p{
+    p {
         margin-bottom: 20px;
+    }
+    @media (max-width: 576px) {
+        text-align:center;
+        padding: 0px 50px;
     }
 `
 
