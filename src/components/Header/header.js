@@ -68,7 +68,9 @@ const DefaultButton = styled.button`
     -webkit-box-shadow: 0 3px 10px rgba(71, 44, 173, 0.2);
     box-shadow: 0 3px 10px rgba(71, 44, 173, 0.2);
     cursor:pointer;
-    
+    @media (max-width: 400px) {
+      display:none;
+    }
     :hover{
         background-color: #263a4f;
         color: #fff;
@@ -283,7 +285,7 @@ const LogoWrapper = styled.div`
   @media (max-width: 768px) {
     padding:0 32px;
   }
-  @media (min-width: 576px) {
+  @media (max-width: 576px) {
     padding:0 16px;
   }
 `
