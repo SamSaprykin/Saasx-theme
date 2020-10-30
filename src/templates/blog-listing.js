@@ -19,7 +19,8 @@ const BlogListing = props => {
 		        <div className="blog-wrap row">
               <BlogGrid 
                 paginationPosition="center" 
-                postsData={postsData} 
+                postsData={postsData}
+                pageContext={props.pageContext}
               />
               <SideBar />
             </div>

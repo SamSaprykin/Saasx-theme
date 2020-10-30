@@ -2,44 +2,51 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import BlogPagination from "../BlogPagination/blogPagination"
+import Paginaton from "../Pagination/pagination"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-const BlogGrid = ({classic,paginationPosition,postsData}) => {
+const BlogGrid = ({classic,paginationPosition,postsData,pageContext}) => {
     let columnSize 
     if(classic) {
         columnSize = "lg-12"
     } else {
         columnSize = "sm-6"
     }
-    console.log(postsData)
+    
     return (
         <>
         <div className="col-lg-8 sm-padding">
-            <div className="row">
+            <WrapperGrid className="row">
             { postsData.map(card => {
+                console.log(card.node.blogPostBody)
             return (
                 <div className={`col-${columnSize} padding-15`} >
+
                     <BlogItem>
-                        <BlogTumb>
-                            <Img fluid={card.node.blogPostBody.blogThumbnail.fluid} alt="post" />
-                            <Category>{card.node.categories.map(category =>{ 
-                            return(
-                                <a href="#">{category}</a>
-                            )})}</Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">{card.node.blogPostBody.blogPostTitle}</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
+                        <Link to={`/blog/${card.node.slug}`}>
+                            <BlogTumb>
+                                <Img fluid={card.node.blogPostBody.blogThumbnail.fluid} alt="post" />
+                                <Category>{card.node.categories.map(category =>{ 
+                                return(
+                                    <a href="#">{category}</a>
+                                )})}</Category>
+                            </BlogTumb>
+                            <BlogContent>
+                                <h3><a href="#">{card.node.blogPostBody.blogTitle}</a></h3>
+                                <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
+                                <a href="#" className="read-more">Read More</a>
+                            </BlogContent>
+                        </Link>
+                        
                     </BlogItem>
                 </div>
             )
             })}
                 
-            </div>
-            <BlogPagination position={paginationPosition} />
+            </WrapperGrid>
+           
+            <Paginaton numPages={pageContext.numPages} currentPage={pageContext.currentPage} />
         </div>      
       </>
     )
@@ -68,6 +75,9 @@ const BlogContent = styled.div`
     }
     a {
         color: #263a4f;
+    }
+    p {
+        color:#7a7695;
     }
     .read-more {
         font-family: "Work Sans",sans-serif;
@@ -105,6 +115,13 @@ const Category = styled.span`
     bottom: 0;
     a {
         color: #fff;
+    }
+`
+
+const WrapperGrid = styled.div`
+    margin-bottom:72px;
+    @media(max-width:756px) {
+        margin-bottom:32px;
     }
 `
  

@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
         reject(result.errors)
       }
       const blogListingData = result.data.allContentfulBlogPost.edges
-      const blogCardsPerPage = 9
+      const blogCardsPerPage = 3
       const numPages = Math.ceil(blogListingData.length / blogCardsPerPage)
       const categorySet = new Set()
       
@@ -132,10 +132,40 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   
-  
+    const contenfulPage = new Promise((resolve, reject) => {
+      graphql(`
+        query {
+          allContentfulContentfulPage {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        
+        
+        result.data.allContentfulContentfulPage.edges.forEach((edge, index) => {
+          createPage({
+            path: edge.node.slug,
+            component: path.resolve(`./src/templates/site-page.js`),
+            context: {
+              slug: `${edge.node.slug}`,
+            },
+          })
+        })
+        resolve()
+      })
+    })
   
     return Promise.all([
       blogListingPage,
       blogPage,
+      contenfulPage
     ])
   }

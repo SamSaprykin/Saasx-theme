@@ -14,19 +14,30 @@ import CtaSection from "../components/CtaSection/ctaSection"
 import BlogIndex from "../components/BlogIndex/blogIndex"
 import SponsorSection from "../components/SponsorSection/sponsorSection"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <HeroSection />
-    <FeaturesSection leftSide="true" />
-    <CounterSection />
-    <ContentSection />
-    <PricingSection />
-    <TestimonialSection />
-    <CtaSection />
-    <BlogIndex />
-    <SponsorSection />
-  </Layout>
-)
+const IndexPage = props => {
+  
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <HeroSection />
+      <FeaturesSection leftSide="true" />
+      <CounterSection />
+      <ContentSection />
+      <PricingSection />
+      <TestimonialSection />
+      <CtaSection />
+      <BlogIndex />
+      <SponsorSection />
+    </Layout>
+  )
+}
+
 
 export default IndexPage
+
+
+
+
+
+
+
