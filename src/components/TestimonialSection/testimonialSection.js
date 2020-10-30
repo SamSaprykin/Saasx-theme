@@ -75,6 +75,9 @@ const TestimonialSection = () => {
 
 const TestimonialSliderWrapper = styled.section`
     padding:100px 0;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
     .swiper-container {
         width: 100%;
         height: 100%;

@@ -18,9 +18,15 @@ const ContactInformation = () => (
 )
 
 const ContactInfo = styled.div`
+  h2 {
+    @media(max-width:756px) {
+      line-height: 28px;
+    }
+  }
   h3{
     line-height: 28px;
     font-weight: 600;
+    
   }
   h4{
     font-size: 15px;

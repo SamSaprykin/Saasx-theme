@@ -59,6 +59,10 @@ const StyledInput = styled.input`
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
+    @media (max-width:756px){
+        margin-bottom:16px;
+        height:56px;
+    }    
     :focus {
         border-color: #2550de;
         box-shadow: none;

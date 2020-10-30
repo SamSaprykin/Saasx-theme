@@ -69,6 +69,9 @@ const FooterWrapper = styled.section`
     background-color: #212529;
     border-bottom: 1px solid #444;
     padding:100px 0;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
 `
 
 const FooterSection = styled.footer`

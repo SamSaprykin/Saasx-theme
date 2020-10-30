@@ -24,6 +24,9 @@ const SideBar = () => (
 
 const SidebarWrapper = styled.div`
   padding-left: 40px;
+  @media(max-width:756px) {
+    padding-left:0;
+  }
 `
 
 SideBar.propTypes = {

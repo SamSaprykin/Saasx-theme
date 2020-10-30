@@ -23,9 +23,9 @@ const NavLinks = () => (
                     <li><Link to="/404">404 Error</Link></li>
                 </ul>
             </li>
-            <li><a href="#">Blog</a> 
+            <li><Link to="/blog">Blog</Link> 
                 <ul>
-                    <li><Link to="/blog-listing">Blog Grid</Link></li>
+                    <li><Link to="/blog">Blog Grid</Link></li>
                     <li><Link to="/blog-classic">Blog Classic</Link></li>
                     <li><Link to="/blog-post">Blog Single</Link></li>
                 </ul>

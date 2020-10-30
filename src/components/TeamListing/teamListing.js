@@ -23,6 +23,9 @@ const TeamListing = () => (
 
 const TeamSectionWrapper = styled.section`
     padding:100px 0;
+    @media (max-width: 992px) {
+        padding: 60px 0;
+    }
 `
 
 const Container = styled.div`

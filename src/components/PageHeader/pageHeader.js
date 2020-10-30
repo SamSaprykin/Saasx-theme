@@ -31,6 +31,9 @@ const PageHeaderWrapper = styled.section`
   position: relative;
   z-index: 1;
   margin-top:80px;
+  @media (max-width: 767px) {
+    height:250px;
+  }
 `
 
 const PageContent = styled.div`
@@ -38,6 +41,9 @@ const PageContent = styled.div`
   h2 {
     color: #fff;
     font-size: 36px;
+    @media (max-width: 767px) {
+      font-size:30px;
+    }
   }
   p {
     color: #ddd;

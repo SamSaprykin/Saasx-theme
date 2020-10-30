@@ -487,6 +487,9 @@ button{
         text-align: center;
         padding: 0px 50px;
     }
+    .contant-section {
+        padding:60px 0;
+    }
 }
 
 /* ---- End of max-width 767px CSS ---- */

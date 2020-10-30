@@ -40,11 +40,18 @@ const Container = styled.div`
     @media (min-width: 1200px) {
         max-width: 1140px;
     }
+    
 `
 
 const ImageWrapper = styled.div`
     margin-bottom:25px;
     text-align:center;
+    img {
+        @media (max-width: 768px) {
+            width:200px;
+        }
+    }
+    
 `
 const ContentWrapper = styled.div`
     text-align:center;
@@ -52,6 +59,9 @@ const ContentWrapper = styled.div`
 
 const StyledSection = styled.section`
     padding:100px 0;
+    @media (max-width: 768px) {
+        padding:60px 0;
+    }
 `
 
 MoneyBackSection.propTypes = {

@@ -24,8 +24,12 @@ const TeamMemberWrapper = styled.div`
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  img {
+    width:100%;
+  }
   :hover img{
     transform: scale(1.1);
+
   }
   
 `

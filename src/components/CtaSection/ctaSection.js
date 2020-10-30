@@ -33,6 +33,9 @@ const CtaSectionWrapper = styled.section`
     left: 0;
     top: 0;
     padding: 100px 0;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
     a {
         color: #263a4f;
         background-color: #fff;

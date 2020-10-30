@@ -42,6 +42,22 @@ const PricingCardsWrapper = styled.div`
 const SectionHeading = styled.div`
     margin-bottom:40px;
     text-align:center;
+    @media (max-width: 768px) {
+        padding: 0px 50px;
+    }
+    h2 {
+        font-size:32px;
+        @media(max-width: 768px) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    p {
+        @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
 `
 
 const Container = styled.div`
