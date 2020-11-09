@@ -14,6 +14,7 @@ import CtaSection from "../components/CtaSection/ctaSection"
 import BlogIndex from "../components/BlogIndex/blogIndex"
 import SponsorSection from "../components/SponsorSection/sponsorSection"
 
+
 const IndexPage = props => {
   
   return (

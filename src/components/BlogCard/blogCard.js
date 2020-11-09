@@ -1,22 +1,27 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 const BlogIndex = ({cardData}) => {
+    console.log(cardData)
     return (
         <Link to="/contact">
             <BlogCard>
+                <Link to={`/blog/${cardData.node.slug}`}>
                 <BlogTumb>
-                    <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                    <Category>interior</Category>
+                    <Img fluid={cardData.node.blogPostBody.blogThumbnail.fluid} alt="post" />
+                    <Category>{cardData.node.categories.map(category =>{ 
+                        return(
+                            <span>{category}</span>
+                    )})}</Category>
                 </BlogTumb>
                 <BlogContent>
-                    <h3><a href="#">Minimalist trending in modern architecture 2019</a></h3>
-                    <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
+                    <h3><a href="#">{cardData.node.blogPostBody.blogTitle}</a></h3>
+                    <p>{cardData.node.blogPostBody.conclusion}</p>
                     <a href="#" className="read-more">Read More</a>
                 </BlogContent>
+                </Link>
             </BlogCard>
         </Link>
         

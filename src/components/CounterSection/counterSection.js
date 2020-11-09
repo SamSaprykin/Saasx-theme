@@ -1,15 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-
+import React, {useRef} from "react"
+import CountUp, {startAnimation} from "react-countup"
+import VisibilitySensor from "react-visibility-sensor"
 
 import styled from "styled-components"
 
 import AnimeUp from "../Animation/AnimeUp"
 
 
-const CounterSection = () => (
-  <>
+const CounterSection = () => {
+    return (
     <CounterSectionWrapper>
         <Container>
             <CounterRow >
@@ -23,21 +24,40 @@ const CounterSection = () => (
                                 <div className="col-md-4 col-sm-6 wow fadeInUp padding-15">
                                     <div className="counter-item">
                                         <i className="ti-face-smile"></i>
-                                        <h2>345</h2>
+                                        
+                                        <CountUp end={345} >
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
+                                                    <h2 ref={countUpRef} />
+                                                </VisibilitySensor>
+                                            )}
+                                        </CountUp>
                                         <h3>Happy Clients</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-sm-6 wow fadeInUp padding-15" data-wow-delay="200ms">
                                     <div className="counter-item">
                                         <i className="ti-layers-alt"></i>
-                                        <h2>1830</h2>
+                                        <CountUp end={1830} >
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
+                                                    <h2 ref={countUpRef} />
+                                                </VisibilitySensor>
+                                            )}
+                                        </CountUp>
                                         <h3>Project Done</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-sm-6 wow fadeInUp padding-15" data-wow-delay="300ms">
                                     <div className="counter-item">
                                         <i className="ti-cup"></i>
-                                        <h2>955</h2>
+                                        <CountUp end={955} >
+                                            {({ countUpRef, start }) => (
+                                                <VisibilitySensor onChange={start} delayedCall>
+                                                    <h2 ref={countUpRef} />
+                                                </VisibilitySensor>
+                                            )}
+                                        </CountUp>
                                         <h3>Total Awards</h3>
                                     </div>
                                 </div>
@@ -56,8 +76,9 @@ const CounterSection = () => (
             </CounterRow>
         </Container>
     </CounterSectionWrapper>
-  </>
-)
+    )
+}
+  
 
 const CounterSectionWrapper = styled.section`
     border-bottom: 1px solid #e5e5e5;

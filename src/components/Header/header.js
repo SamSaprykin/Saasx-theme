@@ -151,6 +151,7 @@ const HeaderWrapper = styled.header`
     left: 0;
     top: 0;
     padding: 0;
+    box-shadow: 0 2px 5px rgba(16,16,16,.08);
     li ul{
         background-color: #fff;
         width: 200px;

@@ -8,9 +8,11 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 const imageLogo = "/logo-dark.png"
 
 const Map = ReactMapboxGl({
+    
     accessToken:
-      'pk.eyJ1Ijoic2FtZWxhcGNlIiwiYSI6ImNrZ3J2dWJqaTA1dGgyc3BwbWFrc2xrd2kifQ.5DY93FBhruYtqYd82DTiVA'
-  });
+      'pk.eyJ1Ijoic2FtZWxhcGNlIiwiYSI6ImNrZ3J2dWJqaTA1dGgyc3BwbWFrc2xrd2kifQ.5DY93FBhruYtqYd82DTiVA',
+    scrollZoom: false
+});
 
 const ContactMap = () => {
     return (

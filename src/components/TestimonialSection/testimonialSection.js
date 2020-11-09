@@ -38,7 +38,7 @@ const TestimonialSection = () => {
   return (
   <>
     <TestimonialSliderWrapper>
-        <div className="container">
+        <Container>
             <div className="section-heading mb-40 text-center">
                 <h4 className="sub-heading">Testimonial</h4>
                 <h2>Checkout what people <br/>says about us!</h2>
@@ -67,7 +67,7 @@ const TestimonialSection = () => {
                 </TestimonialItem>
             </Swiper>
             </div>
-        </div>
+        </Container>
     </TestimonialSliderWrapper>
   </>
   )
@@ -144,6 +144,28 @@ const TestimonialItem = styled.div`
         display: block;
         margin-bottom: 20px;
     }
+`
+
+const Container = styled.div`
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media (min-width: 768px) {
+        max-width: 750px;
+    }
+    @media (min-width: 992px) {
+        max-width: 970px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+    
 `
 
 TestimonialSection.propTypes = {

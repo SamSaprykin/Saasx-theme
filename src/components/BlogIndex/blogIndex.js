@@ -1,54 +1,38 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
- 
+import useLatestPosts from "../../hooks/useLatestPosts"
 import styled from "styled-components"
 
 import BlogCard from "../BlogCard/blogCard"
 
-const BlogIndex = () => (
-  <>
-     <BlogSection>
-        <Container>
-            <SectionHeading>
-                <span>From Blog</span>
-                <h2>Speciallized news</h2>
-            </SectionHeading>
-            <div className="row blog-wrap">
-                <div className="col-lg-4 col-sm-6 sm-padding">
-                    <BlogCard />
+const BlogIndex = () => {
+    const latestPosts = useLatestPosts()
+    console.log(latestPosts)
+    return (
+        <BlogSection>
+            <Container>
+                <SectionHeading>
+                    <span>From Blog</span>
+                    <h2>Speciallized news</h2>
+                </SectionHeading>
+                <div className="row blog-wrap">
+                        {
+                            latestPosts.map((card,i) => {
+                                return (
+                                    <div className="col-lg-4 col-sm-6 sm-padding" key={i}>
+                                      <BlogCard  cardData={card} />
+                                    </div>
+                                )
+                            })
+                        }
+                    
                 </div>
-                <div className="col-lg-4 col-sm-6 sm-padding">
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Architecture</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">Terrace in the town yamazaki kentaro design workshop.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-                <div className="col-lg-4 col-sm-6 sm-padding">
-                    <BlogItem>
-                        <BlogTumb>
-                            <img src="https://via.placeholder.com/350x200.png?text=SaasX" alt="post" />
-                            <Category><a href="#">Design</a></Category>
-                        </BlogTumb>
-                        <BlogContent>
-                            <h3><a href="#">W270 house são paulo arquitetos fabio jorge architeqture.</a></h3>
-                            <p>Building first evolved out dynamics between needs means available building materials attendant skills.</p>
-                            <a href="#" className="read-more">Read More</a>
-                        </BlogContent>
-                    </BlogItem>
-                </div>
-            </div>
-        </Container>
-    </BlogSection>
-  </>
-)
+            </Container>
+        </BlogSection>
+    )
+}
+ 
 
 const BlogSection = styled.section`
     padding: 100px 0;

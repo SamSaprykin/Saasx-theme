@@ -87,7 +87,23 @@ const StyledNav = styled.nav`
     }
   }
   
-  
+  ul {
+    li {
+      a {
+        color: #263a4f;
+        font-family: 'Work Sans', sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 20px;
+        letter-spacing: 0;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 80px;
+        z-index: 1;
+      }
+    }
+  }
 `
 
 NavLinks.propTypes = {
