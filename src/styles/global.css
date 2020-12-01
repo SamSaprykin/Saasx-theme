@@ -324,6 +324,18 @@ button{
     z-index: 1;
 }
 
+.ReactModal__Overlay {
+    position:fixed !important;
+    z-index:9999 !important;
+    
+}
+
+.ReactModal__Content {
+    border:none !important;
+    border-radius: 0 !important;
+    
+}
+
 .error-section{
     margin-top:80px;
 }
