@@ -66,7 +66,7 @@ const BlogComponents2 = () => {
                     }
                 
                 </StyledRow>
-                <ButtonWrapper class="text-center mt-7">
+                <ButtonWrapper>
                     <Link to="/">View all</Link>
                 </ButtonWrapper>
             </Container>

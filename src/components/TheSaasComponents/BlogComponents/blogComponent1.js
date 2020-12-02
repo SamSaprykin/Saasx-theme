@@ -29,25 +29,25 @@ const BlogComponents1 = () => {
     
     return (
       <>
-        <BlockHeader id="block-1" class="block-number">Block 1</BlockHeader>
+        <BlockHeader>Block 1</BlockHeader>
 
-        <SectionBackground class="section bg-gray">
-            <Container class="container">
-            <SectionTitle class="text-center mb-8">Recent Blog Posts</SectionTitle>
+        <SectionBackground>
+            <Container>
+            <SectionTitle>Recent Blog Posts</SectionTitle>
 
-                <StyledRow class="row gap-y">
+                <StyledRow>
                     {
                         cardsData.map((card,index) => {
                             return (
-                                <div class="col-md-6 col-lg-4">
-                                    <BlogCard class="card border hover-shadow-6 d-block">
-                                        <Link to="/"><img class="card-img-top" src={card.image} alt="Card image cap" /></Link>
+                                <div className="col-md-6 col-lg-4">
+                                    <BlogCard>
+                                        <Link to="/"><img src={card.image} alt="Card image cap" /></Link>
                                         <TextContent class="p-6 text-center">
                                             <BlogCategory>
                                                 <Link to="/"> {card.category} </Link>
                                             </BlogCategory>
-                                            <BlogCardText class="mb-0">
-                                                <Link class="text-dark" to="/">{card.text}</Link>
+                                            <BlogCardText>
+                                                <Link to="/">{card.text}</Link>
                                             </BlogCardText>
                                         </TextContent>
                                     </BlogCard>
@@ -169,6 +169,9 @@ const BlogCardText = styled.h5`
     font-family:Dosis;
     letter-spacing: 0.5px;
     font-size: 1.23047rem;
+    a {
+        color: #191919;
+    }
 `
 
 const TextContent = styled.div`
