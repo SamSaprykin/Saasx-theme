@@ -110,12 +110,14 @@ const TextContent = styled.div`
 `
 
 const BlogCategory = styled.p`
+    margin-bottom:1rem;
     a {
         color: #bfc5ca;
         font-weight:500;
         letter-spacing: 2px;
         font-size: 12.75px;
         font-family:Open Sans;
+        
     }
 `
 
