@@ -42,7 +42,7 @@ const BlogComponents1 = () => {
                                 <div className="col-md-6 col-lg-4">
                                     <BlogCard>
                                         <Link to="/"><img src={card.image} alt="Card image cap" /></Link>
-                                        <TextContent class="p-6 text-center">
+                                        <TextContent>
                                             <BlogCategory>
                                                 <Link to="/"> {card.category} </Link>
                                             </BlogCategory>

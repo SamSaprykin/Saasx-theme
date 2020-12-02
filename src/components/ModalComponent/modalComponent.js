@@ -41,10 +41,10 @@ class ModalComponent extends React.Component {
         <BlogCard>
             <ImageContainer>
                 <Link to="#"><img  src={this.props.data.image} alt="Card image cap" /></Link>
-                <ButtonOpen onClick={this.openModal}><i class="fa fa-play"></i></ButtonOpen>
+                <ButtonOpen onClick={this.openModal}><i className="fa fa-play"></i></ButtonOpen>
             </ImageContainer>
             <TextContent >
-                <BlogCardText class="mb-0">
+                <BlogCardText>
                     <Link to="#">{this.props.data.text}</Link>
                 </BlogCardText>
                 <BlogCategory>
@@ -62,7 +62,7 @@ class ModalComponent extends React.Component {
                 <ButtonClose onClick={this.closeModal}></ButtonClose>
                 <WrapperIframe>
                 <ContainerIframe>
-                    <StyledIframe class="responsive-iframe" src={this.props.data.videoLink}></StyledIframe>
+                    <StyledIframe className="responsive-iframe" src={this.props.data.videoLink}></StyledIframe>
                 </ContainerIframe>
                 </WrapperIframe>
             </ModalContent>
