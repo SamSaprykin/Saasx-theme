@@ -52,7 +52,17 @@ const BlogComponents9 = ({}) => {
                                 <div className={`col-md-6 col-lg-${card.columnSize}`}>
                                      <CardBlog background={card.background} backgroundType={card.backgroundType}>
                                         <CardContent>
-
+                                            <BlogCategory>
+                                                {card.category}
+                                            </BlogCategory>
+                                            <CardTitle>
+                                                {card.text}
+                                            </CardTitle>
+                                            <CtaWrapper>
+                                                <Link to={card.linkTo}>
+                                                    Read more
+                                                </Link>
+                                            </CtaWrapper>
                                         </CardContent>
                                     </CardBlog>
                                 </div>
@@ -151,6 +161,7 @@ const CardBlog = styled.div`
     cursor:pointer;
     display:flex;
     align-items:center;
+    padding:0 !important;
     ::before {
         position: absolute;
         content: '';
@@ -168,6 +179,43 @@ const CardContent = styled.div`
     position:absolute;
     padding-left: 5rem !important;
     padding-right: 5rem !important;
+    width:100%;
+    text-align:center;
+`
+
+const BlogCategory = styled.h5`
+    color: rgba(255,255,255,0.8);
+    font-weight: 800;
+    font-family: Dosis;
+    letter-spacing: 2px;
+    font-size: .70313rem !important;
+`
+
+const CardTitle = styled.h3`
+    font-weight: 200 !important;
+    margin-bottom: .5rem;
+    font-family: Dosis;
+    font-size: 1.75781rem;
+    color: #fff;
+`
+
+const CtaWrapper = styled.div`
+    a {
+        font-size: 11px;
+        padding: 8px 26px 6px;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        outline: none;
+        transition: 0.15s linear;
+        border:1px solid rgba(255,255,255,0.3);
+        color: rgba(255,255,255,0.8);
+        font-weight: 600;
+        :hover {
+            color:black;
+            background-color:#ffffff;
+        }
+    }
 `
 
 

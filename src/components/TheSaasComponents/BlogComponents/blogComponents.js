@@ -11,6 +11,8 @@ import BlogComponents6 from "./blogComponent6"
 import BlogComponents7 from "./blogComponent7"
 import BlogComponents8 from "./blogComponent8"
 import BlogComponents9 from "./blogComponent9"
+import BlogComponents10 from "./blogComponent10"
+
 const BlogComponentsList = ({cardData}) => {
     
     return (
@@ -24,6 +26,7 @@ const BlogComponentsList = ({cardData}) => {
             <BlogComponents7 />
             <BlogComponents8 />
             <BlogComponents9 />
+            <BlogComponents10 />
         </ComponentsWrapper>
     )
 }
