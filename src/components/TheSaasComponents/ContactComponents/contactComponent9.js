@@ -6,22 +6,19 @@ import styled from "styled-components"
 
 const cardsData = [
     {
-        category:"News",
-        image:"/blogCard1.jpg",
-        text:"We relocated our office to a new designed garage",
-        linkTo:"/",
+        title:"Business",
+        descritpion:"Some quick example text to build on the card title and make up the bulk.",
+        info:"0 800 123 4455"
     },
     {
-        category:"Marketing",
-        image:"/blogCard2.jpg",
-        text:"Top 5 brilliant content marketing strategies",
-        linkTo:"/",
+        title:"Press",
+        descritpion:"Some quick example text to build on the card title and make up the bulk.",
+        info:"info@example.com"
     },
     {
-        category:"Design",
-        image:"/blogCard3.jpg",
-        text:"Best practices for minimalist design with example",
-        linkTo:"/",
+        title:"Meet",
+        descritpion:"Some quick example text to build on the card title and make up the bulk.",
+        info:"Get Direction"
     }
 ]
 
@@ -29,14 +26,34 @@ const ContactComponents9 = () => {
     
     return (
       <>
-        <BlockHeader>Block 1</BlockHeader>
+        <BlockHeader>Block 9</BlockHeader>
 
         <SectionBackground>
             <Container>
-            <SectionTitle>Recent Blog Posts</SectionTitle>
-
+            <SectionTitle>Contact Us</SectionTitle>
+            <SectionSubhead>
+                They original on mountains, drew the support time. The of to graduate into to is the to she.
+            </SectionSubhead>
                 <StyledRow>
-                   
+                    {
+                        cardsData.map((card,index) => {
+                            return (
+                                <div className="col-md-4 col-lg-4" key={index}>
+                                    <ContactCard>
+                                        <TitleCard>
+                                            {card.title}
+                                        </TitleCard>
+                                        <DescriptionCard>
+                                            {card.descritpion}
+                                        </DescriptionCard>
+                                        <InfoCard>
+                                            {card.info}
+                                        </InfoCard>
+                                    </ContactCard>
+                                </div>
+                            )
+                        })
+                    }
                    
                 </StyledRow>
 
@@ -75,7 +92,9 @@ const SectionTitle = styled.h2`
     margin-bottom:80px;
     text-align:center;
     font-family:Dosis;
-    font-weight: 500;
+    font-size: 3.5rem;
+    font-weight: 200;
+    line-height: 1.5;
 `
 
 const SectionBackground = styled.div`
@@ -118,12 +137,60 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    margin-top:70px;
 `
 
 
+const SectionSubhead = styled.span`
+    text-align:center;
+    margin:0 auto;
+    display:block;
+    font-size: 1.125rem;
+    line-height: 1.9;
+    color: #757575;
+    font-family:Open Sans;
+    font-weight: 300;
+`
 
+const ContactCard = styled.div`
+    padding: 1.5rem !important;
+    border: 1px solid #f1f2f3 !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    align-items:center;
+`
 
+const TitleCard = styled.h5`
+    font-family: Dosis;
+    font-size: 1.23047rem;
+    line-height: 1.5;
+    color: #323d47;
+    letter-spacing: 0.5px;
+    font-weight:500;
+`
 
+const DescriptionCard = styled.p`
+    font-size: .87891rem !important;
+    font-family: Open Sans;
+    margin-bottom: 1rem;
+    text-align: center !important;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+`
+
+const InfoCard = styled.span`
+    font-family: Open Sans;
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #50a1ff;
+`
 
 ContactComponents9.propTypes = {
   
