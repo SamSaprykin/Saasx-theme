@@ -5,4 +5,5 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "./src/styles/global.css";
 import "./src/styles/elegant-font-icons.css";
 import "./src/styles/themify-icons.css";
+import "./src/styles/et_line.css";
 import "./src/styles/fontawesome.min.css";

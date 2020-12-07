@@ -2,44 +2,40 @@ import { Link } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import BgImage from 'gatsby-background-image';
+import { graphql, useStaticQuery } from 'gatsby'
 
 
-const cardsData = [
-    {
-        category:"News",
-        image:"/blogCard1.jpg",
-        text:"We relocated our office to a new designed garage",
-        linkTo:"/",
-    },
-    {
-        category:"Marketing",
-        image:"/blogCard2.jpg",
-        text:"Top 5 brilliant content marketing strategies",
-        linkTo:"/",
-    },
-    {
-        category:"Design",
-        image:"/blogCard3.jpg",
-        text:"Best practices for minimalist design with example",
-        linkTo:"/",
-    }
-]
+const StyledBgImg = styled(BgImage)`
+  width: 100%;
+  height: 480px;
+  
+`
 
 const ContentComponents5 = () => {
-    
+      const ParallaxImage = useStaticQuery(graphql`
+        query ImageParallax {
+          image: file(absolutePath: {regex: "/background13.jpg/"}) {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+    `)
+    const imageData = ParallaxImage.image.childImageSharp.fluid
     return (
       <>
         <BlockHeader>Block 5</BlockHeader>
 
         <SectionBackground>
-            <Container>
-            <SectionTitle>Recent Blog Posts</SectionTitle>
-
-                <StyledRow>
-                    
-                </StyledRow>
-
-            </Container>
+            <StyledBgImg
+              fluid={imageData}
+              style={{ backgroundAttachment: 'fixed' }}
+            />
+            <Overlay />
+            <TextParallax>Make New Friends</TextParallax>
         </SectionBackground>
       </>
     )
@@ -68,60 +64,42 @@ const BlockHeader = styled.h5`
     }
 `
 
-const SectionTitle = styled.h2`
-    color: #323d47;
-    letter-spacing: 0.5px;
-    margin-bottom:80px;
-    text-align:center;
-    font-family:Dosis;
-    font-weight: 500;
-`
+
 
 const SectionBackground = styled.div`
     position: relative;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    
+`
+const Overlay  = styled.div`
+  ::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #191919;
+    border-radius: inherit;
+    opacity:0.3;
+  }
 `
 
-const Container = styled.div`
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    @media (min-width: 576px) {
-        max-width: 540px;
-    }
-    @media (min-width: 768px) {
-        max-width: 750px;
-    }
-    @media (min-width: 992px) {
-        max-width: 970px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
+const TextParallax = styled.h3`
+    color:white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-weight: 600;
+    font-family:Dosis;
+    font-size:80px;
+    line-height: 1.5;
 `
-
-
-
-const StyledRow = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-`
-
-
-
-
-
 
 ContentComponents5.propTypes = {
   

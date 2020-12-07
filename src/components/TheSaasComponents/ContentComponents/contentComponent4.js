@@ -4,26 +4,16 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 
-const cardsData = [
-    {
-        category:"News",
-        image:"/blogCard1.jpg",
-        text:"We relocated our office to a new designed garage",
-        linkTo:"/",
-    },
-    {
-        category:"Marketing",
-        image:"/blogCard2.jpg",
-        text:"Top 5 brilliant content marketing strategies",
-        linkTo:"/",
-    },
-    {
-        category:"Design",
-        image:"/blogCard3.jpg",
-        text:"Best practices for minimalist design with example",
-        linkTo:"/",
-    }
-]
+const contentData = {
+    title:"Our Mission",
+    descritpion:"We’re a team of creative and experienced designers and developers. We used to work as freelancers and we know what do you need and more that, we know what do your customers want from you.",
+    listInfo: [
+        " Deliver a high quality web design",
+        " Support our customers once signing a contract",
+        " Streamline an expanded array of web", 
+        " Pursue web-enabled niche markets with professionals"
+    ]
+}
 
 const ContentComponents4 = () => {
     
@@ -33,10 +23,21 @@ const ContentComponents4 = () => {
 
         <SectionBackground>
             <Container>
-            <SectionTitle>Recent Blog Posts</SectionTitle>
 
                 <StyledRow>
-                    
+                    <Content className="col-md-7">
+                       <TitleInfo>{contentData.title}</TitleInfo>
+                       <DescriptionInfo>{contentData.descritpion}</DescriptionInfo>
+                       <ListInfo>
+                            {
+                                contentData.listInfo.map((item,index) => {
+                                    return (
+                                        <ListItem key={index}><i className="ti-check"></i>{item}</ListItem>
+                                    )
+                                })
+                            }
+                       </ListInfo>
+                    </Content>
                 </StyledRow>
 
             </Container>
@@ -68,14 +69,6 @@ const BlockHeader = styled.h5`
     }
 `
 
-const SectionTitle = styled.h2`
-    color: #323d47;
-    letter-spacing: 0.5px;
-    margin-bottom:80px;
-    text-align:center;
-    font-family:Dosis;
-    font-weight: 500;
-`
 
 const SectionBackground = styled.div`
     position: relative;
@@ -84,7 +77,7 @@ const SectionBackground = styled.div`
     background-repeat: no-repeat;
     padding-top: 7rem;
     padding-bottom: 7rem;
-    background-color: #fafbfb;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     margin: 30px 20px 100px;
 `
 
@@ -116,13 +109,49 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+
 `
 
 
+const Content = styled.div`
+    margin:0 auto;
+`
 
+const TitleInfo = styled.h3`
+    font-weight: 400;
+    color: #323d47;
+    letter-spacing: 0.5px;
+    font-size: 2.10938rem;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+    font-family:Dosis;
+`
 
+const DescriptionInfo = styled.p`
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-family:Open Sans;
+    line-height: 1.9;
+    color: #757575;
+    margin-bottom:1rem;
+`
 
-
+const ListInfo = styled.ul`
+    margin-top:20px;
+    i {
+        margin-right:15px;
+        color: #3cd458 !important;
+    }
+`
+const ListItem = styled.div`
+    font-family: Open Sans;
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+    text-align: left;
+    margin-bottom: 1rem;
+`
 
 ContentComponents4.propTypes = {
   
