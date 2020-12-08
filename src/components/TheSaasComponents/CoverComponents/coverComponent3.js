@@ -1,6 +1,7 @@
 import React, {useState} from "react"
-import styled from "styled-components"
-import Modal from 'react-modal';
+import styled, {keyframes} from "styled-components"
+import Modal from 'react-modal'
+import { Link } from 'gatsby'
 
 const customStyles = {
     content : {
@@ -50,8 +51,14 @@ const CoverComponents3 = () => {
                         <ButtonPlay onClick={openModal}>
                             <i className="fa fa-play"></i>
                         </ButtonPlay>
+                        <TextPurchase><span> Or </span> <Link to="/">Purchase now</Link> </TextPurchase>
                     </div>
-                    <div className="col-12 pb-7"></div>
+                    <WrapperArrow className="col-12">
+                        <LinkArrow>
+                            <ArrowSpan></ArrowSpan>
+                        </LinkArrow>
+                        
+                    </WrapperArrow>
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -189,6 +196,7 @@ const ButtonPlay = styled.button`
     margin:0 auto;
     outline:none !important;
     border:none  !important;
+    margin-bottom:32px;
     i {
         margin-left: 4px;
         font-size: 0.875rem;
@@ -262,6 +270,44 @@ const WrapperIframe = styled.div`
 
 const ModalContent = styled.div`
   position:relative;
+`
+
+const TextPurchase = styled.p`
+  color: rgba(255,255,255,0.8);   
+  padding-bottom: 2px;
+  a {
+    border-bottom: 1px dashed white;
+    font-size:12.75px;
+    color: rgba(255,255,255,0.8);
+    font-family:Open Sans;
+  }
+  span {
+      margin-right:8px;
+      
+  }
+`
+
+const ArrowSpan = styled.span`
+    color: rgba(255,255,255,0.8);
+    border-color: #fff;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    border-left: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+    transform: rotate(-45deg);
+    animation: scrollDown1 2s infinite;
+    
+`
+
+const LinkArrow = styled(Link)`
+    color: rgba(255,255,255,0.8);
+    
+`
+
+const WrapperArrow = styled.div`
+    padding-bottom: 3rem !important;
 `
 
 CoverComponents3.propTypes = {

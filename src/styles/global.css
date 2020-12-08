@@ -277,6 +277,12 @@ button{
   }
 }
 
+@keyframes scrollDown1 {
+    0%  { transform: rotate(-45deg) translate(0, 0); }
+    20% { transform: rotate(-45deg) translate(-16px, 16px); }
+    40% { transform: rotate(-45deg) translate(0, 0); }
+}
+
 /* Button Style */
 .btn_group{}
 .btn_group a{
