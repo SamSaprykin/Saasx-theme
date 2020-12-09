@@ -1,23 +1,6 @@
-import React, {useState} from "react"
+import React from "react"
 import styled from "styled-components"
-import Modal from 'react-modal'
 import { Link } from 'gatsby'
-
-const customStyles = {
-    content : {
-      top                   : '50%',
-      left                  : '50%',
-      right                 : 'auto',
-      bottom                : 'auto',
-      marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)',
-      width                 : '100%',
-      height                : '100%',
-      background            : 'black',
-      padding               : '0',
-    }
-};
-
 
 const dataCover = {
     title:"TheSaaS",
@@ -175,69 +158,10 @@ const ButtonCover = styled.button`
     }
 `
 
-const ButtonClose = styled.a`
-    padding:16px 32px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    color: gray;
-    font-family: "Open Sans",sans-serif;
-    font-weight: 100;
-    outline:none;
-    border:none;
-    cursor:pointer;
-    :hover {
-      color:white;
-    }
-    ::before {
-      display: inline-block;
-      content: "\\00d7"; /* This will render the 'X' */
-      font-size:40px;
-    }
-`
 
-const ContainerIframe = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
-  top:50%;
-  .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-  }
-`
 
-const StyledIframe = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none !important;
-`
 
-const WrapperIframe = styled.div`
-  width:100%;
-  height:100%;
-  max-width:960px;
-  max-height:475px;
-  margin:0 auto;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top:10%;
-`
 
-const ModalContent = styled.div`
-  position:relative;
-`
 
 
 const ArrowSpan = styled.span`

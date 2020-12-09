@@ -33,7 +33,7 @@ const CoverComponents8 = () => {
                         
                     </div>
                     <div className="col-lg-6 ml-auto padding-none">
-                        <img src="./laptop-2.png" />
+                        <img src="/laptop-2.png" />
                     </div>
                    
                 </StyledRow>
