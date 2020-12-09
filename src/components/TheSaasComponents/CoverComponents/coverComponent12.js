@@ -46,13 +46,13 @@ const CoverComponents12 = () => {
                             {dataCover.title}
                             <Typing speed={100} loop={true} cursorClassName="cursor">
                                 <TypingSpan> Startups.</TypingSpan>
-                                <Typing.Backspace count={9} />
-                                <TypingSpan> WebApps.</TypingSpan>
-                                <Typing.Backspace count={8} />
-                                <TypingSpan> Softwares.</TypingSpan>
                                 <Typing.Backspace count={10} />
+                                <TypingSpan> WebApps.</TypingSpan>
+                                <Typing.Backspace count={9} />
+                                <TypingSpan> Softwares.</TypingSpan>
+                                <Typing.Backspace count={11} />
                                 <TypingSpan> Entrepreneurs.</TypingSpan>
-                                <Typing.Backspace count={14} />
+                                <Typing.Backspace count={15} />
                             </Typing>
                         </CoverTitle>
                         

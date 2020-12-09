@@ -17,7 +17,7 @@ import CoverComponents12 from "./coverComponent12"
 import CoverComponents13 from "./coverComponent13"
 import CoverComponents14 from "./coverComponent14"
 import CoverComponents15 from "./coverComponent15"
-import CoverComponents16 from "./coverComponent16"
+
 
 
 const CoverComponentsList = ({cardData}) => {
@@ -39,7 +39,6 @@ const CoverComponentsList = ({cardData}) => {
             <CoverComponents13 />
             <CoverComponents14 />
             <CoverComponents15 />
-            <CoverComponents16 />
         </ComponentsWrapper>
     )
 }

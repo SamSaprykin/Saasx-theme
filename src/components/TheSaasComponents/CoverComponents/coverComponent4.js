@@ -4,7 +4,7 @@ import styled from "styled-components"
 const coverData = {
     coverDataTitle:"Better Website Design; More Conversion.",
     coverDescritption: "TheSaaS is an elegant, modern and fully customizable SaaS and WebApp template.",
-    coverImage:"./laptop-1.png"
+    coverImage:"/laptop-1.png"
 }
 const CoverComponents4 = () => {
       

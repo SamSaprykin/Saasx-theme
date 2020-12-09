@@ -4,7 +4,7 @@ import styled from "styled-components"
 const coverData = {
     coverDataTitle:"Find the <span> best rated </span> <span> restaurants </span> near you.",
     coverDescritption: "We can help you find the best restaurants, fast foods, and cafes near you; take an order and deliver it to your door. Register once, and order from everywhere.",
-    coverImage:"./bg_vector.png"
+    coverImage:"/bg_vector.png"
 }
 
 const CoverComponents2 = () => {

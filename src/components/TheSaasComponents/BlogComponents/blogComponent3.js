@@ -171,7 +171,7 @@ const BlogTitle = styled.h5`
 `
 
 const BlogCardText = styled.h5`
-    font-family: "Open Sans",sans-serif;
+    font-family: Open Sans;
     font-size: .9375rem;
     font-weight: 300;
     line-height: 1.9;
