@@ -17,6 +17,7 @@ const BlocsList = () => (
         <Link to="/cover-components">Cover components</Link>
         <Link to="/cta-components">Cta components</Link>
         <Link to="/faq-components">Faq components</Link>
+        <Link to="/feature-components">Feature components</Link>
     </WrapperLinks>
     
   </Layout>
