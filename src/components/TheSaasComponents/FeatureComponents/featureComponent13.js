@@ -2,7 +2,13 @@ import { Link } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import AnimeImage from "../../Animation/AnimeImage"
 
+const featureData = {
+    title:"A dashboard with metrics",
+    descritption:"Mountains, in the not respect prior the brown must loyalty. Terms, sides house. A their people on separated tone english too.",
+    quotedText:"Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title."
+}
 
 const FeatureComponent13 = () => {
     
@@ -13,7 +19,28 @@ const FeatureComponent13 = () => {
             <Container>
             
                 <StyledRow>
-                  
+                    <div className="col-md-4 text-align-left mx-auto">
+                        <SectionTitle>{featureData.title}</SectionTitle>
+                        <SectionDescription>{featureData.descritption}</SectionDescription>
+                        <Rating>
+                            <label class="fa fa-star"></label>
+                            <label class="fa fa-star"></label>
+                            <label class="fa fa-star"></label>
+                            <label class="fa fa-star"></label>
+                            <label class="fa fa-star"></label>
+                        </Rating>
+                        <TextQuoted>
+                            " {featureData.quotedText} "
+                        </TextQuoted>
+                        <AuthorInfo>
+                            <img className="avatar" src="/avatar.jpg" />
+                        </AuthorInfo>
+                    </div>
+                    <div className="col-md-6 text-center">
+                        <AnimeImage>
+                            <img src="/laptop-1.png" />
+                        </AnimeImage>
+                    </div>
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -63,18 +90,7 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    @media (min-width: 576px) {
-        max-width: 540px;
-    }
-    @media (min-width: 768px) {
-        max-width: 750px;
-    }
-    @media (min-width: 992px) {
-        max-width: 970px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
+    
 `
 
 const StyledRow = styled.div`
@@ -90,14 +106,57 @@ const StyledRow = styled.div`
     }
     .text-align-left {
         text-align:left;
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
 
 `
 
+const SectionTitle = styled.h2`
+    color: #323d47;
+    letter-spacing: 0.5px;
+    font-family:Dosis;
+    font-weight: 500;
+    font-size: 2.10938rem;
+    margin-bottom:8px;
+`
+
+const SectionDescription = styled.p`
+    margin-bottom: 1rem;
+    margin-top:1rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+    font-family:Open Sans;
+    font-size: 1.125rem;
+`
 
 
+const Rating = styled.div`
+    margin-top: 5rem !important;
+    color: #ffba00;
+    label {
+        margin-right: 5px;
+        letter-spacing: .5px;
+        margin-bottom: 4px;
+    }
+`
+
+const TextQuoted = styled.p`
+    margin:15px 0;
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+    text-align: left;
+    font-family:Open Sans;
+`
+
+const AuthorInfo = styled.div`
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 10rem;
+    }
+`
 
 FeatureComponent13.propTypes = {
   

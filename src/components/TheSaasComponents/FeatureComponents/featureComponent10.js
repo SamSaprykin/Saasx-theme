@@ -2,7 +2,15 @@ import { Link } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import AnimeImage from "../../Animation/AnimeImage"
 
+const featureData = {
+    title:"Unlimited Layout Option",
+    descritption:"Designer duties, not just some of legs, the attained secure large obscurity, with I model most we his odd trade, made the an and another narrow she of other big in.",
+    listItems: [
+        "Can was instantly as being"," After hands real five should"," Young the writer's a was","As immediately the we people"
+    ]
+}
 
 const FeatureComponent10 = () => {
     
@@ -13,7 +21,33 @@ const FeatureComponent10 = () => {
             <Container>
             
                 <StyledRow>
-                  
+                    <div className="col-lg-5 align-self-center">
+                            <AnimeImage>
+                                <img src="/header-gradient.jpg" />
+                            </AnimeImage>
+                    </div>
+                    <div className="col-10 col-lg-6 mx-auto text-center text-lg-left">
+                            <SectionTitle>{featureData.title}</SectionTitle>
+                            <SectionDescription>{featureData.descritption}</SectionDescription>
+                            <hr />
+                            <ul>
+                                {
+                                    featureData.listItems.map((item,index) => {
+                                        return (
+                                            <WrapperList key={index}>
+                                                <i class="ti-check text-success mr-2" />
+                                                <li>{item}</li>
+                                            </WrapperList>  
+                                        )
+                                    })
+                                }
+                            </ul>
+                            <CallToAction href="/">
+                                Read more
+                                <i className="ti-arrow-right fs-10 ml-1" />
+                            </CallToAction>
+                    </div>
+                       
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -57,24 +91,15 @@ const SectionBackground = styled.div`
 `
 
 const Container = styled.div`
+    position: relative;
+    height: 100%;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    @media (min-width: 576px) {
-        max-width: 540px;
-    }
-    @media (min-width: 768px) {
-        max-width: 750px;
-    }
-    @media (min-width: 992px) {
-        max-width: 970px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
+    
 `
 
 const StyledRow = styled.div`
@@ -96,7 +121,63 @@ const StyledRow = styled.div`
 
 `
 
+const SectionTitle = styled.h2`
+    color: #323d47;
+    letter-spacing: 0.5px;
+    font-family:Dosis;
+    font-weight: 500;
+    font-size: 2.10938rem;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    
+`
 
+const SectionDescription = styled.p`
+    font-size: 1.125rem;
+    line-height: 1.9;
+    color: #757575;
+    font-family:Open Sans;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+`
+
+const WrapperList = styled.div`
+    display:flex;
+    margin-bottom: 1rem;
+    li {
+        margin:0;
+        font-size: 14px !important;
+        font-weight: 300;
+        line-height: 1.9;
+        color: #757575;
+        text-align: left;
+        font-family:Open Sans;
+    }
+    i {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+`
+
+const CallToAction = styled.a`
+    font-weight: 600 !important;
+    font-size: .82031rem !important;
+    color: #50a1ff;
+    text-transform: uppercase !important;
+    font-family:Open Sans;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    cursor:pointer;
+    margin-top: 3rem !important;
+    margin-bottom:1rem;
+    display:block;
+    max-width:160px;
+    i {
+        font-size: 10px !important;
+    }
+`
 
 
 FeatureComponent10.propTypes = {

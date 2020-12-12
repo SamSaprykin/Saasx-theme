@@ -5,18 +5,18 @@ import styled from "styled-components"
 import AnimeImage from "../../Animation/AnimeImage"
 
 const featureData = {
-    title:"Endless Features",
-    descritption:"Frequency proposal these the differences each your it in has then by he lift been what just precipitate, the came time. The can lift communicated. Part. Of having she boss at would that lay arm, two and are diagrams.",
+    title:"Features",
+    descritption:"Professionally impact focused strategic theme areas via worldwide synergy.",
     infoItems: [
         {
-            iconItem:"icon-genius",
-            titleItem:"FAST & EASY WORK",
-            descritptionItem:"His everything its from of safe from her the have owner avoid violin, either little defined brown.",
+            iconItem:"icon-heart",
+            titleItem:"Creative Design",
+            descritptionItem:"You're very second god creeping air saying you're tree female thing Make also signs together, night winged. God yielding first.",
         },
         {
-            iconItem:"icon-linegraph",
-            titleItem:"CREATE RESULT",
-            descritptionItem:"His everything its from of safe from her the have owner avoid violin, either little defined brown.",
+            iconItem:"icon-video",
+            titleItem:"Cool Animations",
+            descritptionItem:"You're very second god creeping air saying you're tree female thing Make also signs together, night winged. God yielding first.",
         }
     ]
 }
@@ -30,27 +30,30 @@ const FeatureComponent6 = () => {
             <Container>
                 
                 <StyledRow>
-                    <div className="col-md-6 text-align-left">
+                    <div className="col-md-5 text-align-left">
                             <SectionTitle>{featureData.title}</SectionTitle>
                             <SectionDescription>{featureData.descritption}</SectionDescription>
                             <hr />
-                            <StyledRow >
+                            <Media >
                             {
                                 featureData.infoItems.map((item,index) => {
                                     return (
-                                        <ItemWrapper className="col-6" key={index}>
+                                        <ItemWrapper key={index}>
                                             <Lead>
                                                 <i className={item.iconItem}></i>
                                             </Lead>
-                                            <TitleItem>{item.titleItem}</TitleItem>
-                                            <DescriptionItem>{item.descritptionItem}</DescriptionItem>
+                                            <Text>
+                                                <TitleItem>{item.titleItem}</TitleItem>
+                                                <DescriptionItem>{item.descritptionItem}</DescriptionItem>
+                                            </Text>
+                                          
                                         </ItemWrapper>
                                     )
                                 })
                             }
-                            </StyledRow>
+                            </Media>
                         </div>
-                        <div className="col-md-5 text-center">
+                        <div className="col-md-5 text-center mx-auto">
                             <AnimeImage>
                                 <img src="/phone-1.png" />
                             </AnimeImage>
@@ -137,7 +140,7 @@ const StyledRow = styled.div`
 `
 
 const SectionTitle = styled.h2`
-    color: #fff;
+    color: #323d47;;
     letter-spacing: 0.5px;
     font-family:Dosis;
     font-weight: 500;
@@ -147,42 +150,55 @@ const SectionTitle = styled.h2`
 
 const SectionDescription = styled.p`
     margin-bottom: 1rem;
-    font-size: .9375rem;
+    font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.9;
-    color: rgba(255,255,255,0.85);
+    color: #757575;
     font-family:Open Sans;
 `
 
 const ItemWrapper = styled.div`
     text-align:left !important;
+    padding:0;
+    display:flex;
+    margin-bottom:1rem;
 `
 
 const Lead = styled.p`
-    color: rgba(255,255,255,0.85);
+    color: #ff4954;
     font-size: 1.875rem !important;
+    margin-right: 1.5rem !important;
 `
 
 const TitleItem = styled.h5`
-    color: rgba(255,255,255,0.85);
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
+    color: #323d47;
+    font-weight: 500;
     margin-bottom: 0 !important;
-    font-size: .9375rem;
-    line-height: 1.9;
-    font-family:Open Sans;
+    font-size: 1.05469rem;
+    font-family:Dosis;
+    line-height: 1.5;
+    letter-spacing: 0.75px;
 `
 
 const DescriptionItem = styled.p`
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 1rem;
     font-size: .9375rem;
     font-weight: 300;
     line-height: 1.9;
+    color: #757575;
+    text-align: left;
+    margin-bottom:1rem;
     font-family:Open Sans;
 `
 
+const Media = styled.div`
+    display: flex;
+    align-items: flex-start;
+    flex-direction:column;
+`
 
+const Text = styled.div`
+
+`
 FeatureComponent6.propTypes = {
   
 }

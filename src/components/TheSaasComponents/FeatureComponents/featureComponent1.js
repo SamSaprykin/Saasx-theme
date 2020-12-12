@@ -8,7 +8,7 @@ const featureData = {
     subTitle:"FEATURE",
     title:"Great Combination",
     description: "Holisticly implement fully tested process improvements rather than dynamic internal.",
-    imageFeature:"./feature-tablet.png",
+    imageFeature:"/feature-tablet.png",
     itemsFeature: [
         {
             iconItem:"icon-mobile",
