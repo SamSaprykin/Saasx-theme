@@ -84,7 +84,7 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    osition: relative;
+    position: relative;
     height: 100%;
 `
 
