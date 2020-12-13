@@ -7,7 +7,9 @@ import AnimeImage from "../../Animation/AnimeImage"
 const featureData = {
     title:"A dashboard with metrics",
     descritption:"Mountains, in the not respect prior the brown must loyalty. Terms, sides house. A their people on separated tone english too.",
-    quotedText:"Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title."
+    quotedText:"Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.",
+    quoteAuthorName:"Hossein Shams",
+    quoteAutorMail:"@thethemeio"
 }
 
 const FeatureComponent13 = () => {
@@ -32,9 +34,17 @@ const FeatureComponent13 = () => {
                         <TextQuoted>
                             " {featureData.quotedText} "
                         </TextQuoted>
-                        <AuthorInfo>
-                            <img className="avatar" src="/avatar.jpg" />
-                        </AuthorInfo>
+                        <AuthorWrapper>
+                            <AuthorInfo>
+                                <img className="avatar" src="/avatar.jpg" />
+                            </AuthorInfo>
+                            <AuthorDetails>
+                                <AuthorName>{featureData.quoteAuthorName}</AuthorName>
+                                <AuthorMail>{featureData.quoteAutorMail}</AuthorMail>
+                            </AuthorDetails>
+                        </AuthorWrapper>
+                        
+
                     </div>
                     <div className="col-md-6 text-center">
                         <AnimeImage>
@@ -155,7 +165,34 @@ const AuthorInfo = styled.div`
         width: 40px;
         height: 40px;
         border-radius: 10rem;
+        margin-right: 1rem !important;
     }
+`
+
+const AuthorWrapper = styled.div`
+    display:flex;
+`
+
+const AuthorDetails = styled.div`
+    display:flex;
+    flex-direction:column;
+`
+
+const AuthorName  = styled.h5`
+    margin-bottom:0;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    color: #323d47;
+    font-family:Dosis;
+    line-height: 1.5;
+    font-size: 1.05469rem;
+`
+
+const AuthorMail = styled.span`
+    font-size:12.75px;
+    color: #757575;
+    text-align: left;
+    font-family:Open Sans;
 `
 
 FeatureComponent13.propTypes = {

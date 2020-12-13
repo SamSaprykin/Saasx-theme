@@ -2,7 +2,13 @@ import { Link } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import AnimeImage from "../../Animation/AnimeImage"
 
+const featureData = {
+    title:"International Payments",
+    subHead: "with a Single Click",
+    descritption:"His everything its from of safe from her the have owner avoid violin, either little defined brown think a was position. Are with phase belly, waved being dull boundless dressed associates.",
+}
 
 const FeatureComponent16 = () => {
     
@@ -13,7 +19,21 @@ const FeatureComponent16 = () => {
             <Container>
             
                 <StyledRow>
-                  
+                    <div className="col-md-5 ml-auto text-align-left">
+                                <SectionTitle>{featureData.title}</SectionTitle>
+                                <SectionSubtitle>{featureData.subHead}</SectionSubtitle>
+                                <SectionDescription>{featureData.descritption}</SectionDescription>
+                                <CallToAction href="/">
+                                    Read more
+                                    <i className="ti-angle-right fs-10 ml-1" />
+                                </CallToAction>
+                    </div>  
+                    <div className="col-md-4 mx-auto text-center">
+                                <AnimeImage>
+                                    <img src="/vector-7.jpg" />
+                                </AnimeImage>
+                    </div>
+                    
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -49,6 +69,7 @@ const SectionBackground = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #65b7cc;
     padding-top: 7rem;
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
@@ -63,18 +84,8 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    @media (min-width: 576px) {
-        max-width: 540px;
-    }
-    @media (min-width: 768px) {
-        max-width: 750px;
-    }
-    @media (min-width: 992px) {
-        max-width: 970px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 1140px;
-    }
+    osition: relative;
+    height: 100%;
 `
 
 const StyledRow = styled.div`
@@ -83,6 +94,7 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     text-align:center;
+    align-items:center;
     hr {
         width: 5% !important;
         margin: 2rem auto;
@@ -96,7 +108,57 @@ const StyledRow = styled.div`
 
 `
 
+const SectionTitle = styled.h2`
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-family:Dosis;
+    font-weight: 500;
+    font-size: 1.75781rem;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    
+`
 
+const SectionDescription = styled.p`
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+    text-align: left;
+    margin-bottom: 1rem;
+    font-family:Open Sans;
+`
+
+
+
+const CallToAction = styled.a`
+    font-weight: 300 ;
+    
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    cursor:pointer;
+    margin-bottom:1rem;
+    display:block;
+    max-width:160px;
+    color: rgba(255,255,255,0.8);
+    font-family:Open Sans;
+    i {
+        font-size: .6375rem;
+    }
+    :hover {
+        color: #ffffff;
+    }
+`
+
+const SectionSubtitle = styled.p`
+    color: rgba(255,255,255,0.85);
+    font-family:Open Sans;
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    line-height: 1.9;
+`
 
 
 FeatureComponent16.propTypes = {
