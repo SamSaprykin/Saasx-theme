@@ -53,7 +53,7 @@ const SectionBackground = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image:url("./background-image-1.jpg");
+    background-image:url("/background-image-1.jpg");
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
