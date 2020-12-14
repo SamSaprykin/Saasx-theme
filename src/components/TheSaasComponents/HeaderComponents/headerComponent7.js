@@ -14,7 +14,13 @@ const HeaderComponent7 = () => {
         <SectionBackground>
             <Container>
                 <StyledRow>
-                    
+                    <TitleSection>Senior Front-end Engineer</TitleSection>
+                    <Position>
+                        <i className="fas fa-map-marker mr-2" />
+                        San Francisco
+                    </Position>
+                    <hr />
+                    <CtaSection>apply now</CtaSection>
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -53,7 +59,9 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    padding: 1.25rem 0;
+    padding-top: 146px;
+    padding-bottom: 90px;
+    background-color: #b9a0c9;
 `
 
 const Container = styled.div`
@@ -84,8 +92,45 @@ const StyledRow = styled.div`
     margin-left: -15px;
     text-align:center;
     align-items:center;
+    flex-direction:column;
+    hr {
+        border-top-color: rgba(117,117,117,0.09);
+        margin: 2rem 0;
+        width:50px;
+        
+    }
 `
 
+const TitleSection = styled.h3`
+    font-size: 2.57813rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-family:Dosis;
+    margin:0 0 .5rem;
+`
+const Position = styled.p`
+    font-size: 1.17188rem !important;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.85);
+    font-family:Open Sans;
+`
+
+const CtaSection = styled.button`
+    border-radius: 10rem;
+    padding: 10px 38px 10px;
+    font-size: 13px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #757575;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    font-weight: 600;
+    line-height: 1.9;
+`
 
 HeaderComponent7.propTypes = {
   
