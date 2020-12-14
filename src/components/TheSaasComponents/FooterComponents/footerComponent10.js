@@ -15,7 +15,46 @@ const FooterComponent10 = () => {
             <Container>
             
                 <StyledRow>
-                    
+                    <div className="col-xl-4 order-md-last">
+                        <TitleInfo>Get Started</TitleInfo>
+                        <Description>
+                            Form so, head allowed how found at right, chosen put sad. Copy of 
+                            field phase offers texts. Great family there first about that.
+                        </Description>
+                        <CtaWrapper>
+                            <StyledButton>start trial</StyledButton>
+                            <StyledButton className="gray-button">contact</StyledButton>
+                        </CtaWrapper>
+                        
+                    </div>
+                    <div className="col-6 col-md-4 col-xl-2">
+                        <TitleInfo>Product</TitleInfo>
+                        <Navbar>
+                            <NavLink to="/">Features</NavLink>
+                            <NavLink to="/">Blog</NavLink>
+                            <NavLink to="/">Policy</NavLink>
+                            <NavLink to="/">Security</NavLink>
+                            <NavLink to="/">Success Story</NavLink>
+                        </Navbar>
+                    </div>
+                    <div className="col-6 col-md-4 col-xl-2">
+                        <TitleInfo>Company</TitleInfo>
+                        <Navbar>
+                            <NavLink to="/">About</NavLink>
+                            <NavLink to="/">Blog</NavLink>
+                            <NavLink to="/">Press</NavLink>
+                            <NavLink to="/">Contact</NavLink>
+                        </Navbar>
+                    </div>
+                    <div className="col-xl-4 order-md-first">
+                        <TitleInfo>We Are Awesome</TitleInfo>
+                        <Description>
+                            We’re a team of experienced designers and developers. 
+                            We can combine beautiful, modern designs with clean, 
+                            functional and high-performance code to produce stunning websites.
+                        </Description>
+                        <Copyright>© 2020 TheThemeio. All rights reserved.</Copyright>
+                    </div>
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -51,9 +90,8 @@ const SectionBackground = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #65b7cc;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
@@ -66,8 +104,18 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
-    osition: relative;
-    height: 100%;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+    @media (min-width: 768px) {
+        max-width: 750px;
+    }
+    @media (min-width: 992px) {
+        max-width: 970px;
+    }
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
 `
 
 const StyledRow = styled.div`
@@ -76,22 +124,81 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     text-align:center;
-    align-items:center;
-    hr {
-        width: 5% !important;
-        margin: 2rem auto;
-        border-top: 1px solid rgba(117,117,117,0.09);
-    }
-    .text-align-left {
+    
+    div {
         text-align:left;
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
 
 `
 
+const TitleInfo = styled.h5`
+    margin-bottom: 1rem !important;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    color: #323d47;
+    font-size: 1.05469rem;
+    font-family:Dosis;
+`
 
+const Description = styled.p`
+    margin-bottom: 1rem;
+    font-size: .9375rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #757575;
+    text-align: left;
+    font-family:Open Sans;
+`
 
+const StyledButton = styled.button`
+    font-size: 11px;
+    padding: 8px 26px 6px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    outline: none;
+    transition: 0.15s linear;
+    color: #fff;
+    background-color: #50a1ff;
+    border-color: #50a1ff;
+    margin-right:0.5rem;
+    font-weight: 600;
+    line-height: 1.9;
+`
+const CtaWrapper = styled.div`
+    display:flex;
+    .gray-button {
+        color: #757575;
+        background-color: #e9ecf0;
+    }
+`
+const Navbar = styled.div`
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 0;
+`
+
+const NavLink = styled(Link)`
+    color: #757575;
+    font-weight: 400;
+    display: block;
+    padding: 2px 0;
+    line-height: 1.9;
+    font-size: .9375rem;
+    font-family:Open Sans;
+    width:160px;
+`
+
+const Copyright = styled.span`
+    font-size:12.75px;
+    font-family:Open Sans;
+    line-height: 1.9;
+    color: #757575;
+    opacity: .7 !important;
+`
 
 FooterComponent10.propTypes = {
   
