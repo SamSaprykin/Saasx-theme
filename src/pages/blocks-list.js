@@ -20,6 +20,7 @@ const BlocsList = () => (
         <Link to="/feature-components">Feature components</Link>
         <Link to="/footer-components">Footer components</Link>
         <Link to="/header-components">Header components</Link>
+        <Link to="/pricing-components">Pricing components</Link>
     </WrapperLinks>
     
   </Layout>
