@@ -123,11 +123,12 @@ const SectionBackground = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #fafbfb;
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    padding-top: 146px;
-    padding-bottom: 90px;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 `
 
 const Container = styled.div`
@@ -203,7 +204,6 @@ const DescriptionSection = styled.p`
 
 
 const Card = styled.div`
-    background-color: #fff;
     border-radius: 5px;
     text-align: center;
     transition: .5s;
@@ -216,7 +216,6 @@ const CardHeader = styled.div`
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 600;
-    background-color: #fcfdfe;
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
@@ -263,6 +262,10 @@ const CtaCard = styled.button`
     font-family:Open Sans;
     margin: 2.75rem 0 1.75rem;
     line-height: 1.9;
+    :hover {
+        color: white;
+        background-color:#50a1ff;
+    }
 `
 
 

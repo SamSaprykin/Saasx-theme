@@ -168,7 +168,7 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    padding-top: 7rem;
+    padding-top: 7rem; 
     padding-bottom: 7rem;
 `
 
