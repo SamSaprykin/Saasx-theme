@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, {useState} from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -11,7 +11,10 @@ const pricingData = {
         {
             title:"single",
             price:"free",
-            subHead:"",
+            priceYear:"free",
+            type:"free",
+            subHead:"Billed",
+            color:"",
             infoRows:[
                 "30 days free trial","Basic support","1 GB attachment"
             ]
@@ -19,7 +22,10 @@ const pricingData = {
         {
             title:"studio",
             price:"39",
-            subHead:"Billed monthly",
+            priceYear:"450",
+            type:"price",
+            subHead:"Billed",
+            color:"green",
             infoRows:[
                 "30 days free trial","Ticket support","100 GB attachment"
             ]
@@ -27,7 +33,10 @@ const pricingData = {
         {
             title:"business",
             price:"69",
-            subHead:"Billed monthly",
+            priceYear:"750",
+            type:"price",
+            subHead:"Billed",
+            color:"",
             infoRows:[
                 "30 days free trial","Call support","Unlimited attachments"
             ]
@@ -36,19 +45,22 @@ const pricingData = {
 }
 
 const PricingComponent1 = () => {
-    
+    const [price, setPrice] = useState('monthly');
     return (
       <>
         <BlockHeader>Block 1</BlockHeader>
         <SectionBackground>
             <Container>
                     <NameSection>{pricingData.nameSection}</NameSection>
-                    <TitleSection>{pricingData.title}</TitleSection>
+                    <TitleSection>
+                        {pricingData.title}
+                    </TitleSection>
                     <hr />
                     <DescriptionSection>{pricingData.description}</DescriptionSection>
                     <SwitcherWrapper>
                         <StyledLabel
-                            className="active"
+                            className={price === "monthly" ? "active" : ""}
+                            onClick={() => setPrice('monthly')}
                         >
                             <StyledInput type="radio"
                                 value="mothly"
@@ -58,6 +70,8 @@ const PricingComponent1 = () => {
                         </StyledLabel>
                         <StyledLabel
                             className=""
+                            onClick={() => setPrice('yearly')}
+                            className={price === "yearly" ? "active" : ""}
                         >
                             <StyledInput type="radio"
                                 value="yearly"
@@ -71,16 +85,31 @@ const PricingComponent1 = () => {
                         pricingData.cards.map((card,index) => {
                             return (
                                 <div className="col-md-4">
-                                    <Card>
+                                    <Card color={card.color}>
                                         <CardHeader>
                                             {card.title}
                                         </CardHeader>
                                         <CardBody>
                                             <Price>
-                                                {card.price}
+                                                {
+                                                    card.type === "price" && <IconDollar> $ </IconDollar>
+                                                }
+                                                {
+                                                    price === "monthly" && card.price
+                                                }
+                                                {
+                                                    price === "yearly" && card.priceYear
+                                                }
                                             </Price>
+                                                
                                             <SubHead>
                                                 {card.subHead}
+                                                {
+                                                    price === "monthly" && " monthly"
+                                                }
+                                                {
+                                                    price === "yearly" && " yearly"
+                                                }
                                             </SubHead>
                                             <ListItems>
                                                 {
@@ -217,6 +246,7 @@ const SwitcherWrapper = styled.div`
     display: inline-flex;
     vertical-align: middle;
     text-align: center !important;
+    margin:0 0 3rem;
     .active {
         background-color: #e9ecf0;
     }
@@ -254,7 +284,9 @@ const StyledLabel = styled.label`
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-    
+    :hover {
+        background-color: #e9ecf0;
+    }
 `
 
 const Card = styled.div`
@@ -263,6 +295,17 @@ const Card = styled.div`
     border-radius: 5px;
     text-align: center;
     transition: .5s;
+    cursor:pointer;
+
+    h2 {
+        color: ${props => (props.color === "green" ? "#3cd458" : "1")};
+    }
+    button {
+        background-color: ${props => (props.color === "green" ? "#3cd458" : "")};
+    }
+    :hover {
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
+    }
 `
 
 const CardHeader = styled.div`
@@ -325,6 +368,14 @@ const CtaCard = styled.button`
     font-family:Open Sans;
     margin: 2.75rem 0 1.75rem;
     line-height: 1.9;
+`
+
+const IconDollar = styled.span`
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: text-top;
+    margin-right: 8px;
+    margin-top: 16px;
 `
 
 PricingComponent1.propTypes = {

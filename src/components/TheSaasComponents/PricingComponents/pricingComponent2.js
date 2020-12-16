@@ -3,6 +3,27 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+const pricingData = {
+    title:"Choose your pricing plan",
+    cards: [
+        {
+            title:"single template",
+            price:"29",
+            subHead:"Single template, lifetime license",
+        },
+        {
+            title:"one year membership",
+            price:"99",
+            subHead:"Get access to all templates",
+        },
+        {
+            title:"lifetime access",
+            price:"199",
+            subHead:"Pay once, have fun forever",
+        }
+    ]
+}
+
 const PricingComponent2 = () => {
     
     return (
@@ -10,8 +31,38 @@ const PricingComponent2 = () => {
         <BlockHeader>Block 2</BlockHeader>
         <SectionBackground>
             <Container>
+                <TitleSection>
+                    {pricingData.title}
+                </TitleSection>
                 <StyledRow>
-
+                    {
+                        pricingData.cards.map((card,index) => {
+                            return (
+                                <div className="col-md-4">
+                                    <Card color={card.color}>
+                                        
+                                        <CardBody>
+                                            <Price>
+                                                <IconDollar> $ </IconDollar>
+                                                {card.price}
+                                            </Price>
+                                            <CardTitle>
+                                                {card.title}
+                                            </CardTitle>
+                                            <SubHead>
+                                                {card.subHead}
+                                            </SubHead>
+                                            
+                                            <CtaCard>
+                                                get started
+                                            </CtaCard>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                
+                            )
+                        })
+                    }
                 </StyledRow>
             </Container>
         </SectionBackground>
@@ -47,11 +98,12 @@ const SectionBackground = styled.div`
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #7a54d8;
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    padding-top: 146px;
-    padding-bottom: 90px;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 `
 
 const Container = styled.div`
@@ -83,33 +135,99 @@ const StyledRow = styled.div`
     margin-left: -15px;
     text-align:center;
     align-items:center;
-    flex-direction:column;
 `
 
-const TitleSection = styled.h3`
-    margin-bottom: 3rem !important;
-    font-size: 3rem;
-    font-weight: 200;
-    line-height: 1.5;
-    color: #323d47;
+const TitleSection = styled.h5`
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 2.10938rem;
+    line-height:1.5;
+    font-family:Dosis;
+    margin:0 auto 60px;
+    text-align:center;
+`
+
+const Card = styled.div`
+    text-align: center;
+    transition: .5s;
+    cursor:pointer;
+    button {
+        background-color: ${props => (props.color === "green" ? "#3cd458" : "")};
+    }
+
+`
+
+const CardTitle = styled.div`
+    line-height: 1.9;
+    color: #fff;
+    font-family:Open Sans;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8325rem;
+    opacity: .9;
+`
+
+const Price = styled.h2`
+    color: #fff;
     letter-spacing: 0.5px;
     font-family:Dosis;
-    margin:0 auto 3rem;
+    margin-top:20px;
+    line-height: 1.5;
+    font-size: 5rem;
+    font-weight: 200;
+    opacity: .9;
 `
 
-const CallToAction  = styled.button`
-    padding: 7px 32px 6px;
-    font-size: 12px;
+const CardBody = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+`
+
+
+const SubHead = styled.p`
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.9;
+    font-family:Open Sans;
+    font-size: .9375rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    opacity: .9;
+`
+
+const CtaCard = styled.button`
+    letter-spacing: 1.7px;
     border-radius: 10rem;
+    outline: none;
+    transition: 0.15s linear;
+    color: rgba(255,255,255,0.6);
+    font-family:Open Sans;
+    margin: 2.75rem 0 1.75rem;
+    line-height: 1.9;
+    width: 200px !important;
+    font-size: 11px;
+    padding: 8px 26px 6px;
     letter-spacing: 1.7px;
     text-transform: uppercase;
-    outline: none;
-    color: #fff;
-    background-color: #50a1ff;
-    border-color: #50a1ff;
-    line-height: 2.2;
-    display:block;
+    border: 1px solid rgba(255,255,255,0.6);
+    :hover {
+        color: #757575;
+        background-color: #f8f9fa;
+        box-shadow: 1px 1px 15px rgba(255,255,255,0.6);
+    }
 `
+
+const IconDollar = styled.span`
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: text-top;
+    margin-right: 8px;
+    margin-top: 16px;
+`
+
 
 PricingComponent2.propTypes = {
   
