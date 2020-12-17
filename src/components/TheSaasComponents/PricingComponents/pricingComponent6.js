@@ -7,16 +7,29 @@ const pricingData = {
     title:"The most fair pricing plans ever.",
     nameSection:"pricing plans",
     description:"Our prices are very easy to understand. There's not any extra or hidden fee. You just pay what is listed here.",
-    cardData: {
-        title:"STARTER",
-        cardImage:"/thumb3.jpg",
-        price:"$6.99",
-        priceYear:"$64.99",
-        subHead:"Package",
-        infoRows:[
-            "30 days free trial","Basic support","1 GB attachment"
-        ]
-    }
+    cards:[
+        {
+            title:"starter",
+            cardImage:"/thumb3.jpg",
+            price:"$6.99",
+            priceYear:"$64.99",
+            subHead:"Package",
+            infoRows:[
+                "30 days free trial","Basic support","1 GB attachment"
+            ]
+        },
+        {
+            title:"business",
+            cardImage:"/thumb11.jpg",
+            price:"$18.99",
+            priceYear:"$164.99",
+            subHead:"Package",
+            infoRows:[
+                "7 Website","Unlimited Bandwidth","Auto Import"
+            ]
+        }
+    ]
+
 }
 
 const PricingComponent6 = () => {
@@ -67,50 +80,57 @@ const PricingComponent6 = () => {
                     <div className="col-md-7 ml-auto">
 
                         <StyledRow>
-                            <div className="col-md-6">
-                                <Card color={pricingData.cardData.color}>
-                                    <CardHeader>
-                                        <CardHeaderTitle>
-                                            {pricingData.cardData.title}
-                                        </CardHeaderTitle>
-                                        <SubHead>
-                                            {
-                                                price === "monthly" && "Monthly "
-                                            }
-                                            {
-                                                price === "yearly" && "Yearly "
-                                            }
-                                            {pricingData.cardData.subHead}
-                                        </SubHead>
-                                        <CardImage src={pricingData.cardData.cardImage} />
-                                    </CardHeader>
-                                    <CardBody>
-                                        <Price>
-                                            {
-                                                pricingData.cardData.type === "price" && <IconDollar> $ </IconDollar>
-                                            }
-                                            {
-                                                price === "monthly" && pricingData.cardData.price
-                                            }
-                                            {
-                                                price === "yearly" && pricingData.cardData.priceYear
-                                            }
-                                        </Price>
-                                        <ListItems>
-                                            {
-                                                pricingData.cardData.infoRows.map((card,index) =>{
-                                                    return (
-                                                        <li key={index}>{card}</li>
-                                                    )
-                                                })
-                                            }
-                                        </ListItems>
-                                        <CtaCard>
-                                            sign up
-                                        </CtaCard>
-                                    </CardBody>
-                                </Card>
-                            </div>
+                            {
+                                pricingData.cards.map((card,index) => {
+                                    return (
+                                        <div className="col-md-6">
+                                            <Card>
+                                                <CardHeader>
+                                                    <CardHeaderTitle>
+                                                        {card.title}
+                                                    </CardHeaderTitle>
+                                                    <SubHead>
+                                                        {
+                                                            price === "monthly" && "Monthly "
+                                                        }
+                                                        {
+                                                            price === "yearly" && "Yearly "
+                                                        }
+                                                        {card.subHead}
+                                                    </SubHead>
+                                                    <CardImage src={card.cardImage} />
+                                                </CardHeader>
+                                                <CardBody>
+                                                    <Price>
+                                                        {
+                                                            card.type === "price" && <IconDollar> $ </IconDollar>
+                                                        }
+                                                        {
+                                                            price === "monthly" && card.price
+                                                        }
+                                                        {
+                                                            price === "yearly" && card.priceYear
+                                                        }
+                                                    </Price>
+                                                    <ListItems>
+                                                        {
+                                                            card.infoRows.map((card,index) =>{
+                                                                return (
+                                                                    <li key={index}>{card}</li>
+                                                                )
+                                                            })
+                                                        }
+                                                    </ListItems>
+                                                    <CtaCard>
+                                                        sign up
+                                                    </CtaCard>
+                                                </CardBody>
+                                            </Card>
+                                        </div>
+                                    )
+                                })
+                            }
+                            
                         </StyledRow>
                     </div>
        
