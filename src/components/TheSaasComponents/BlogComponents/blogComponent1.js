@@ -105,6 +105,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -144,6 +148,10 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    @media(max-width:768px) {
+        align-items:center;
+        justify-content:center;
+    }
 `
 
 const BlogCard = styled.div`
@@ -161,6 +169,12 @@ const BlogCard = styled.div`
     border: 1px solid #f1f2f3 !important;
     :hover {
         box-shadow: 0 1px 35px rgba(0, 0, 0, 0.07); 
+    }
+    @media(max-width:768px) {
+        margin-bottom:32px;
+    }
+    @media(max-width:576px) {
+        margin-bottom:24px;
     }
 `
 

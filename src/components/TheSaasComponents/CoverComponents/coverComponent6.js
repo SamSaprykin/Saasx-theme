@@ -138,8 +138,11 @@ const StyledRow = styled.div`
     justify-content:center;
    
     .padding-none {
-        padding-left:0 !important;
-        padding-right:0 !important;
+        padding-left:0;
+        padding-right:0;
+        @media(max-width:768px) {
+            padding:0 15px;
+        }
     }
 `
 
@@ -152,6 +155,10 @@ const CoverTitle = styled.h3`
     font-family:Dosis;
     letter-spacing: 0.5px;
     margin-bottom:0;
+    @media(max-width:576px) {
+        font-size:42px;
+        text-align:center;
+    }
 `
 
 const CoverDescription = styled.p`
@@ -161,6 +168,10 @@ const CoverDescription = styled.p`
     margin-bottom: 3rem !important;
     margin-top: 2rem !important;
     font-weight: 300;
+    @media(max-width:576px) {
+        font-size:15px;
+        text-align:center;
+    }
 `
 
 const ButtonPlay = styled.button`
@@ -201,6 +212,10 @@ const CoverSubhead = styled.h5`
   font-weight: 300;
   line-height: 1.5;
   font-family:Dosis;
+  @media(max-width:576px) {
+    font-size:42px;
+    text-align:center;
+  }
 `
 const CallToAction = styled.button`
     border-radius: 10rem;
@@ -217,9 +232,17 @@ const CallToAction = styled.button`
     font-family:Open Sans;  
     font-weight: 600;
     margin: 8px; 
+    @media(max-width:576px) {
+        max-width:200px;
+        margin:8px auto;
+    }
 `
 const CtaWrapper = styled.div`
     display:flex;
+    @media(max-width:576px) {
+        flex-direction:column;
+        margin-bottom:2rem;
+    }
     .gray {
         color:rgba(255,255,255,0.6);
         background-color: transparent;
@@ -237,7 +260,7 @@ const VideoWrapper = styled.div`
     width: 100%;
     padding: 0;
     overflow: hidden;
-    margin-top: 5rem !important;
+    margin-top: 5rem;
     border-radius: .25rem !important;
     box-sizing: border-box;
     ::before {
@@ -246,6 +269,7 @@ const VideoWrapper = styled.div`
         z-index: 0;
         padding-top: 56.25%;
     }
+    
 `
 
 const Poster = styled.div`
@@ -267,6 +291,7 @@ const ContainerIframe = styled.div`
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
+  
   .responsive-iframe {
     position: absolute;
     top: 0;
@@ -277,6 +302,15 @@ const ContainerIframe = styled.div`
     height: 100%;
     max-width:570px;
     max-height:320px;
+    
+    @media(max-width:768px) {
+        max-width:690px;
+        max-height:388px;
+    }
+    @media(max-width:576px) {
+        max-width:305px;
+        max-height:170px;
+    }
   }
 `
 
@@ -295,6 +329,16 @@ const WrapperIframe = styled.div`
   max-height:320px;
   transition:all 0.4s ease-in-out;
   z-index:${props => (props.playing === true ? "10" : "0")};
+  
+  @media(max-width:768px) {
+    max-width:690px;
+    max-height:388px;
+    padding:0 15px;
+  }
+  @media(max-width:576px) {
+    max-width:305px;
+    max-height:170px;
+  }
 `
 
 CoverComponents6.propTypes = {

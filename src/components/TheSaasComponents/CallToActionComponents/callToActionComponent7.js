@@ -55,8 +55,11 @@ const SectionTitle = styled.h2`
     text-align:center;
     font-family:Dosis;
     font-weight: 200 !important;
-    font-size: 1.875rem !important;
+    font-size: 1.875rem;
     margin:0 auto 5rem;
+    @media (max-width: 576px) {
+        font-size:28px;
+    }
 `
 
 const SectionBackground = styled.div`

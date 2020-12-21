@@ -67,6 +67,9 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     background-image: linear-gradient(135deg, #f9f7ff 0%, #fff 50%, #f6f3ff 100%);
     padding-top: 90px;
+    @media(max-width:768px) {
+        padding-top: 5rem;  
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -107,6 +110,9 @@ const DescriptionCover = styled.p`
     text-align: left;
     font-family:Open Sans;
     max-width:540px;
+    @media(max-width:768px) {
+        margin-bottom: 3rem !important;
+    }
 `
 
 const TitleCover = styled.h3`
@@ -123,6 +129,9 @@ const TitleCover = styled.h3`
     span:nth-child(1) {
         color: #ffba00 !important;
     }
+    @media(max-width:768px) {
+        font-size:36px;
+    }
 `
 const Cover = styled.img`
     max-width: 100%;
@@ -131,6 +140,13 @@ const Cover = styled.img`
 
 const CoverCtaWrapper = styled.div`
     display:flex;
+    
+    @media(max-width:768px) {
+        margin-bottom:2rem;
+    }
+    @media(max-width:576px) {
+        flex-direction:column;
+    }
     .white {
         color: #929daf;
         background-color: transparent;

@@ -16,9 +16,11 @@ const CoverComponents1 = () => {
         <SectionBackground>
             <Container>
                 <StyledRow>
-                    <CoverTitle>{dataCover.title}</CoverTitle>
-                    <CoverDescription>{dataCover.descritpion}</CoverDescription>
-                    <CoverButton>get started</CoverButton>
+                    <div className="col-md-8">
+                        <CoverTitle>{dataCover.title}</CoverTitle>
+                        <CoverDescription>{dataCover.descritpion}</CoverDescription>
+                        <CoverButton>get started</CoverButton>
+                    </div>
                     <ImageWrapper>
                         <AnimeImage>
                             <img src={dataCover.image} alt="cove-image" className="col-md-8"/>
@@ -94,6 +96,7 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     align-items:center;
+    text-align:center;
 `
 
 const ImageWrapper = styled.div`
@@ -113,6 +116,11 @@ const CoverTitle = styled.h3`
     letter-spacing: 0.5px;
     font-size: 2.57813rem;
     font-family:Dosis;
+    font-weight:500;
+    @media (max-width: 576px) {
+        font-size: 32px;
+        line-height:1.5;
+    }
 `
 
 const CoverDescription = styled.p`
@@ -122,7 +130,9 @@ const CoverDescription = styled.p`
     margin-top: 1rem !important;
     font-weight: 300;
     font-family:Open Sans;
-    
+    @media (max-width: 576px) {
+        font-size: 15px;
+    }
 `
 
 const CoverButton = styled.button`

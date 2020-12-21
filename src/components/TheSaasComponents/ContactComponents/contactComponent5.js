@@ -15,7 +15,7 @@ const ContactComponents5 = () => {
             <Container>
                 <StyledRow>
                     <div className="col-md-6">
-                        <StyledForm className="col-11 col-lg-12">
+                        <StyledForm className="col-11 col-md-6 mx-auto mx-md-0">
                             <FormGroup className="col-md-12">
                                 <StyledInput type="text" id="name" name="name"  placeholder="Your Name" required />
                             </FormGroup>
@@ -110,6 +110,10 @@ const SectionBackground = styled.div`
         border-radius: inherit;
         opacity: .8;
     }
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -166,7 +170,10 @@ const DefaultButton = styled.button`
 `
 
 const FormInfo = styled.div`
-    padding-top: 1rem !important;
+    padding-top: 1rem;
+    @media(max-width:576px) {
+        padding: 2rem 16px 0;
+    }
 `
 
 const TitleInfo = styled.p`
@@ -176,6 +183,9 @@ const TitleInfo = styled.p`
     font-size: 1.05469rem;
     margin-bottom:8px;
     font-family:Dosis;
+    @media(max-width:576px) {
+        font-size: 14.8px;
+    }
 `
 
 const TextInfo = styled.p`
@@ -187,6 +197,9 @@ const TextInfo = styled.p`
     text-align: left;
     max-width:130px;
     margin-bottom:40px;
+    @media(max-width:576px) {
+        font-size: 13.1px;
+    }
 `
 
 const FormGroup  = styled.div`
@@ -194,6 +207,9 @@ const FormGroup  = styled.div`
     padding-left: 5px;
     font-weight: 300;
     margin-bottom:16px;
+    @media(max-width:576px) {
+        margin-bottom:0;
+    }
 `
 
 const StyledInput = styled.input`
@@ -249,6 +265,9 @@ const StyledTextArea = styled.textarea`
         border-color: #eaeff4;
         box-shadow: none;
         outline: none;
+    }
+    @media(max-width:576px) {
+        margin-bottom:16px;
     }
 `
 

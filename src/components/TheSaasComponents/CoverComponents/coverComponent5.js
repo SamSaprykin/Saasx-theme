@@ -170,6 +170,9 @@ const CoverTitle = styled.h3`
     line-height: 1.5;
     font-family:Dosis;
     letter-spacing: 0.5px;
+    @media (max-width: 576px) {
+        font-size:48px;
+    }
 `
 
 const CoverDescription = styled.p`
@@ -279,6 +282,9 @@ const CoverSubhead = styled.h5`
   color: rgba(255,255,255,0.85);
   font-size: 1.64063rem !important;
   margin-bottom: 1rem;
+  @media (max-width: 576px) {
+    font-size:23px;
+  }
 `
 const CallToAction = styled.button`
     border-radius: 10rem;

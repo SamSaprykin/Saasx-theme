@@ -107,6 +107,10 @@ const DescriptionCover = styled.p`
     text-align: left;
     font-family:Open Sans;
     max-width:540px;
+    @media(max-width:576px) {
+        font-size:15px;
+        text-align: center;
+    }
 `
 
 const TitleCover = styled.h3`
@@ -117,6 +121,10 @@ const TitleCover = styled.h3`
     margin-bottom: .5rem;
     font-family:Dosis;
     line-height: 1.5;
+    @media(max-width:576px) {
+        font-size:36px;
+        text-align: center;
+    }
 `
 const Cover = styled.img`
     max-width: 100%;
@@ -125,6 +133,13 @@ const Cover = styled.img`
 
 const CoverCtaWrapper = styled.div`
     display:flex;
+    
+    @media(max-width:768px) {
+        margin-bottom:2rem;
+    }
+    @media(max-width:576px) {
+        flex-direction:column;
+    }
     .white {
         color: #757575;
         background-color: #f8f9fa;
@@ -148,7 +163,10 @@ const ButtonCover = styled.button`
     font-family:Open Sans;
     letter-spacing: 1.7px;
     line-height: 2.2;
-    
+    @media(max-width:576px) {
+        max-width:170px;
+        margin:8px auto;
+    }
     :hover {
         box-shadow: 1px 1px 15px 0px #757575;
         color: #757575;

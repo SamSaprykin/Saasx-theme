@@ -64,8 +64,13 @@ const SectionTitle = styled.h2`
     text-align:center;
     font-family:Dosis;
     font-weight: 500;
-    font-size: 3.75rem !important;
+    font-size: 3.75rem;
     line-height: 1.5;
+    @media (max-width: 576px) {
+        font-size:52px;
+        max-width: 90%;
+        margin:0 auto 1rem;
+    }
 `
 
 const SectionBackground = styled.div`
@@ -115,13 +120,18 @@ const StyledRow = styled.div`
 
 const SectionDescritption = styled.p`
     text-align:center;
-    font-size: 1.17188rem !important;
+    font-size: 1.17188rem;
     margin-bottom: 1rem;
     font-weight: 300;
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
     margin-bottom:80px;
+    @media (max-width: 576px) {
+        font-size:16.5px;
+        max-width: 90%;
+        margin:0 auto 2rem;
+    }
 `
 
 const SectionButton = styled.button`

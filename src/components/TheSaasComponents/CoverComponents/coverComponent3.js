@@ -173,15 +173,22 @@ const CoverTitle = styled.h3`
     font-size: 2.57813rem;
     font-family:Dosis;
     font-weight: 500;
+    @media(max-width:768px) {
+        font-size:36px;
+    }
 `
 
 const CoverDescription = styled.p`
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
-    font-size: 1.17188rem !important;
-    margin-bottom: 5rem !important;
-    margin-top: 2rem !important;
+    font-size: 1.17188rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
     font-weight: 300;
+    @media(max-width:576px) {
+        font-size:15px;
+        margin-bottom: 3rem;
+    }
 `
 
 const ButtonPlay = styled.button`

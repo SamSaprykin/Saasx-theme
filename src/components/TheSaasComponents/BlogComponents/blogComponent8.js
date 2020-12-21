@@ -90,6 +90,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #f5f6f7;
     padding:112px 0;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`

@@ -83,6 +83,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -122,6 +126,9 @@ const FormGroup  = styled.div`
     font-weight: 300;
     margin-bottom:16px;
     text-align:center;
+    @media(max-width:576px) {
+        margin-bottom:0;
+    }
 `
 
 const StyledInput = styled.input`
@@ -182,6 +189,9 @@ const StyledTextArea = styled.textarea`
         box-shadow: none;
         outline: none;
     }
+    @media (max-width:756px){
+        margin-bottom:16px;
+    } 
 `
 
 const DefaultButton = styled.button`

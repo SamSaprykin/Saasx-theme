@@ -65,7 +65,10 @@ const SectionTitle = styled.h2`
     font-family:Dosis;
     font-weight: 500;
     font-size: 2.10938rem;
-    
+    @media (max-width: 576px) {
+        font-size: 30px;
+        font-weight: 400;
+    }
 `
 
 const SectionDescritption = styled.p`
@@ -75,6 +78,9 @@ const SectionDescritption = styled.p`
     font-weight: 300;
     margin-bottom: 80px;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size:16.5px;
+    }
 `
 
 const SectionBackground = styled.div`
@@ -86,6 +92,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-bottom: 3rem !important;
+        padding-top:3rem !important;
+    }
 `
 
 const Container = styled.div`
@@ -137,6 +147,9 @@ const StyledInput = styled.input`
     font-size: 1.0625rem;
     line-height: 2.2;
     border-radius: 10rem;
+    @media (max-width: 576px) {
+        height:39px;
+    }
 `
 
 const StyledButton = styled.button`
@@ -154,6 +167,10 @@ const StyledButton = styled.button`
     font-family:Open Sans;
     :hover {
         box-shadow:1px 2px 5px 0px  #50a1ff;
+    }
+    @media (max-width: 576px) {
+        position:absolute;
+        right:0;
     }
 `
 
@@ -173,6 +190,10 @@ const ContentWrapper = styled.div`
     text-align:center;
     max-width:70%;
     margin:0 auto;
+    @media (max-width: 576px) {
+        max-width:100%;
+        padding:0 15px;
+    }
 `
 
 CtaComponent6.propTypes = {

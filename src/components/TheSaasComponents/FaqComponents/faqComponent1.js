@@ -45,7 +45,7 @@ const FaqComponent1 = () => {
             <Container>
             
                 <StyledRow>
-                    <div className="col-md-12">
+                    <div className="col-md-11">
                         <FaqSubhead>{faqData.subhead}</FaqSubhead>
                         <FaqTitle>{faqData.title}</FaqTitle>
                         <hr />
@@ -104,6 +104,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 `
 
 const Container = styled.div`
@@ -163,6 +167,9 @@ const FaqTitle = styled.h5`
     letter-spacing: 0.5px;
     font-size: 2.10938rem;
     font-family:Dosis;
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 `
 
 const FaqDescription = styled.p`
@@ -172,6 +179,9 @@ const FaqDescription = styled.p`
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size: 15px;
+    }
 `
 
 const TitleItem = styled.h5`

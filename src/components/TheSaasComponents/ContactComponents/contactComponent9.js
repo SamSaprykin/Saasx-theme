@@ -38,7 +38,7 @@ const ContactComponents9 = () => {
                     {
                         cardsData.map((card,index) => {
                             return (
-                                <div className="col-md-4 col-lg-4" key={index}>
+                                <div className="col-lg-4" key={index}>
                                     <ContactCard>
                                         <TitleCard>
                                             {card.title}
@@ -95,6 +95,13 @@ const SectionTitle = styled.h2`
     font-size: 3.5rem;
     font-weight: 200;
     line-height: 1.5;
+    @media(max-width:768px) {
+        font-size: 48px;
+    }
+    @media (max-width:576px){
+        font-size: 42px;
+        margin-bottom:50px;
+    } 
 `
 
 const SectionBackground = styled.div`
@@ -106,6 +113,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -150,6 +161,9 @@ const SectionSubhead = styled.span`
     color: #757575;
     font-family:Open Sans;
     font-weight: 300;
+    @media (max-width:576px){
+        font-size: 15.82px;
+    } 
 `
 
 const ContactCard = styled.div`
@@ -163,6 +177,9 @@ const ContactCard = styled.div`
     background-clip: border-box;
     border-radius: .25rem;
     align-items:center;
+    @media (max-width:768px){
+        margin-bottom:16px;
+    } 
 `
 
 const TitleCard = styled.h5`
@@ -172,6 +189,9 @@ const TitleCard = styled.h5`
     color: #323d47;
     letter-spacing: 0.5px;
     font-weight:500;
+    @media (max-width:576px){
+        font-size: 17.3px;
+    } 
 `
 
 const DescriptionCard = styled.p`

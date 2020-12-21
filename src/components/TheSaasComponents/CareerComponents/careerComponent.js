@@ -135,6 +135,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -215,7 +219,7 @@ const PanelCta = styled.a`
     margin:0 auto;
     text-align:center;
     display:block;
-    margin:0 auto;
+    margin:32px auto 0;
     span {
       padding:10px 32px 9px;
       background-color: #50a1ff;
@@ -230,6 +234,9 @@ const PanelCta = styled.a`
       :hover {
         box-shadow: 1px 1px 15px 0px rgba(80,161,255,0.7);
       }
+    }
+    @media(max-width:576px) {
+      padding-top:16px;
     }
 `
 
@@ -249,6 +256,9 @@ const PanelPostition = styled.span`
     color: #323d47;
     letter-spacing: 0.75px;
     font-size: 1.05469rem;
+    @media(max-width:576px) {
+      font-size: 15px;
+    }
 `
 
 const PanelPlace = styled.h5`
@@ -260,6 +270,9 @@ const PanelPlace = styled.h5`
     i {
       margin-left: .5rem !important;
       color: #bfc5ca !important;
+    }
+    @media(max-width:576px) {
+      display:none;
     }
 `
 

@@ -180,7 +180,9 @@ const CoverTitle = styled.h3`
     div {
         display:inline-block;
     }
-    
+    @media(max-width:576px) {
+        font-size: 36px;
+    }
 `
 
 const CoverDescription = styled.p`
@@ -190,12 +192,21 @@ const CoverDescription = styled.p`
     margin-bottom: 1rem !important;
     font-weight: 300;
     line-height: 1.9;
+    @media(max-width:576px) {
+        font-size: 16px;
+    }
 `
 
 const CoverCtaWrapper = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    @media(max-width:768px) {
+        margin-bottom:1rem;
+    }
+    @media(max-width:576px) {
+        flex-direction:column;
+    }
     .gray {
         color: rgba(255,255,255,0.6);
         background-color:transparent;

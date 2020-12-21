@@ -91,6 +91,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 `
 
 const Container = styled.div`
@@ -122,23 +126,35 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+   
 `
 
 const TitleContent = styled.h3`
-    text-align: right !important;
+    text-align: right;
     font-weight: 400;
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
-    font-size: 1.64063rem !important;
+    font-size: 1.64063rem;
+    @media(max-width:576px) {
+        font-size: 24px;
+        margin-bottom:16px;
+    }
 `
 
 const Content = styled.div`
     display:flex;
     justify-content:space-between;
+    @media(max-width:576px) {
+        flex-direction:column;
+    }
 `
 
-const WrapperContent = styled.div``
+const WrapperContent = styled.div`
+    @media(max-width:576px) {
+        margin-bottom:24px;
+    }
+`
 
 const TitleInfo = styled.h4`
     letter-spacing: 0.75px;
@@ -148,6 +164,9 @@ const TitleInfo = styled.h4`
     font-family:Dosis;
     margin-bottom: .5rem;
     line-height:1.5;
+    @media(max-width:576px) {
+        font-size: 14.8px;
+    }
 `
 
 const TextContent = styled.p`
@@ -157,6 +176,9 @@ const TextContent = styled.p`
     line-height: 1.9;
     color: #757575;
     text-align: left;
+    @media(max-width:576px) {
+        font-size: 13px;
+    }
 `
 
 

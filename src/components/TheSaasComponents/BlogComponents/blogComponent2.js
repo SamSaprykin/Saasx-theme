@@ -44,7 +44,7 @@ const BlogComponents2 = () => {
                     {
                         cardsData.map((card,index) => {
                             return (
-                                <div className="col-md-6 col-lg-4">
+                                <div className="col-lg-4">
                                     <ModalComponent data={card} key={index} />
                                 </div>
                             )
@@ -100,7 +100,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
-    
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -131,6 +134,14 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    .col-lg-4 {
+        @media(max-width:768px) {
+            margin-bottom:32px;
+        }
+        @media(max-width:576px) {
+            margin-bottom:24px;
+        }
+    }
 `
 
 

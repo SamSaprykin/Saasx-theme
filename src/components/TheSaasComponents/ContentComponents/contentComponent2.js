@@ -22,7 +22,6 @@ const ContentComponents2 = () => {
                 <StyledRow>
                     <div className="col-md-4 no-padding">
                         <Banner src={contentData.image} />
-
                     </div>
                     <div className="col-md-8">
                         <Content>
@@ -69,6 +68,7 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     margin: 30px 20px 100px;
     background-color:#33323a;
+
 `
 
 const Container = styled.div`
@@ -97,7 +97,9 @@ const ContentTitle = styled.h4`
     margin-bottom: .5rem;
     font-family:Dosis;
     line-height: 1.5;
-    
+    @media(max-width:576px) {
+        font-size: 24px;
+    }
 `
 const ContentSubhead = styled.h4`
     font-size: 1.125rem;
@@ -107,6 +109,9 @@ const ContentSubhead = styled.h4`
     line-height: 1.9;
     text-align: left;
     color: #fff; 
+    @media(max-width:576px) {
+        font-size: 15px;
+    }
 `
 
 const ContentText = styled.p`
@@ -121,6 +126,12 @@ const Banner = styled.img`
     object-fit:cover;
     height:100%;
     max-height:516px;
+    @media(max-width:768px) {
+        max-height:808px;
+    }
+    @media(max-width:576px) {
+        max-height:300px;
+    }
 `
 
 const Content = styled.div`
@@ -130,6 +141,9 @@ const Content = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    @media(max-width:576px) {
+        padding: 28px 13px;
+    }
 `
 
 ContentComponents2.propTypes = {

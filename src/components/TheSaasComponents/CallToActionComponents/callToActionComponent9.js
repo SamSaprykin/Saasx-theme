@@ -70,7 +70,12 @@ const SectionTitle = styled.h2`
     span {
         border-bottom: 1px dashed white;
     }
-    
+    @media (max-width: 576px) {
+        line-height: 1;
+        font-size:50px;
+        padding-bottom:0;
+        max-height:80px;
+     }
 `
 
 const SectionBackground = styled.div`
@@ -115,9 +120,15 @@ const StyledRow = styled.div`
     flex-direction:column;
     max-width: 70%;
     margin: 0 auto 70px;
+    @media (max-width: 576px) {
+        margin-bottom:0;
+    }
     hr {
         width: 50px;
         margin:2.5rem auto 1.5rem;
+        @media (max-width: 576px) {
+           margin:1rem auto;
+        }
     }
 `
 

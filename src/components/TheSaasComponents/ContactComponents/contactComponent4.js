@@ -96,6 +96,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -127,6 +131,12 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: 0;
     margin-left: 0;
+    .col-md-6 {
+        @media(max-width:576px) {
+           min-height:300px;
+           
+        } 
+    }
 `
 const FormGroup  = styled.div`
     padding-right: 5px;
@@ -134,6 +144,9 @@ const FormGroup  = styled.div`
     font-weight: 300;
     margin-bottom:16px;
     text-align:center;
+    @media(max-width:768px) {
+        margin-bottom:0;
+    }
 `
 const SectionTitle = styled.h2`
     color: #323d47;
@@ -143,6 +156,10 @@ const SectionTitle = styled.h2`
     font-family:Dosis;
     font-weight: 500;
     font-size:33.75px;
+    @media(max-width:768px) {
+        font-size:24px;
+        margin-bottom:32px;
+    }
 `
 
 const StyledInput = styled.input`
@@ -202,6 +219,9 @@ const StyledTextArea = styled.textarea`
         border-color: #eaeff4;
         box-shadow: none;
         outline: none;
+    }
+    @media(max-width:768px) {
+        margin-bottom:16px;
     }
 `
 

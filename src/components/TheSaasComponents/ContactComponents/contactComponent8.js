@@ -39,16 +39,16 @@ const ContactComponents8 = () => {
                 <StyledRow>
                     <StyledForm className="col-md-12">
                             <FormRow>
-                                <FormGroup className="col-md-3">
+                                <FormGroup className="col-sm-6 col-xl-3">
                                     <StyledInput type="text" id="email" name="email"  placeholder="Email" required />
                                 </FormGroup>
-                                <FormGroup className="col-md-3">
+                                <FormGroup className="col-sm-6 col-xl-3">
                                     <StyledInput type="text" id="name" name="name"  placeholder="Name" required />
                                 </FormGroup>
-                                <FormGroup className="col-md-3">
+                                <FormGroup className="col-sm-6 col-xl-3">
                                     <StyledInput type="text" id="subject" name="subject"  placeholder="Subject" required />
                                 </FormGroup>
-                                <FormGroup className="col-md-3">
+                                <FormGroup className="col-sm-6 col-xl-3">
                                     <StyledInput type="text" id="company" name="company"  placeholder="Company name" required />
                                 </FormGroup>
                                 <FormGroup className="col-md-12">
@@ -100,6 +100,13 @@ const SectionTitle = styled.h2`
     font-size: 3rem;
     font-weight: 200;
     line-height: 1.5;
+    @media(max-width:768px) {
+        font-size: 48px;
+    }
+    @media (max-width:576px){
+        font-size: 42px;
+        margin-bottom:50px;
+    } 
 `
 
 const SectionDescription = styled.p`
@@ -133,6 +140,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -196,12 +207,19 @@ const StyledInput = styled.input`
         box-shadow: none;
         outline: none;
     }
+    @media (max-width:576px){
+        margin-bottom:0;
+        height:45px;
+    } 
 `
 
 const StyledForm = styled.form`
     padding:2rem;
     margin:0 auto;
     border-radius: .25rem !important;
+    @media (max-width:756px){
+        padding:15px;
+    } 
 `
 
 const FormRow = styled.div`
@@ -231,6 +249,9 @@ const StyledTextArea = styled.textarea`
         box-shadow: none;
         outline: none;
     }
+    @media (max-width:576px){
+        margin-bottom:16px;
+    } 
 `
 
 const DefaultButton = styled.button`

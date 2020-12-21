@@ -79,6 +79,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 `
 
 const Container = styled.div`
@@ -125,6 +129,9 @@ const TitleInfo = styled.h3`
     margin-bottom: .5rem;
     line-height: 1.5;
     font-family:Dosis;
+    @media(max-width:576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionInfo = styled.p`
@@ -134,6 +141,10 @@ const DescriptionInfo = styled.p`
     line-height: 1.9;
     color: #757575;
     margin-bottom:1rem;
+    @media(max-width:576px) {
+        font-size:15.8px;
+        margin-bottom:24px;
+    }
 `
 
 const ListInfo = styled.ul`
@@ -141,6 +152,9 @@ const ListInfo = styled.ul`
     i {
         margin-right:15px;
         color: #3cd458 !important;
+        @media(max-width:576px) {
+            margin-right:8px;
+        }
     }
 `
 const ListItem = styled.div`
@@ -151,6 +165,9 @@ const ListItem = styled.div`
     color: #757575;
     text-align: left;
     margin-bottom: 1rem;
+    @media(max-width:576px) {
+        font-size:13px;
+    }
 `
 
 ContentComponents4.propTypes = {

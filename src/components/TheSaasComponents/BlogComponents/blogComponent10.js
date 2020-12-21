@@ -120,6 +120,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #f5f6f7;
     padding:112px 0;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -149,7 +153,15 @@ const Container = styled.div`
 
 const StyledRow = styled.div`
     column-count: 3;
-    
+    @media (max-width: 1199.98px) {
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    @media (max-width: 767.98px) {
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+       
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1;

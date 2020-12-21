@@ -106,8 +106,8 @@ const BlockHeader = styled.h5`
 `
 
 const SectionBackground = styled.div`
-    question: relative;
-    background-question: center center;
+    position: relative;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 7rem;
@@ -115,6 +115,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 `
 
 const Container = styled.div`
@@ -216,6 +220,10 @@ const SectionTitle = styled.h2`
     text-align:center;
     font-family:Dosis;
     font-weight: 500;
+    font-size: 2.10938rem;
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
 `
 
 

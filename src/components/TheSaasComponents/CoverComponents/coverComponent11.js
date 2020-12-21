@@ -137,12 +137,17 @@ const CoverTitle = styled.h3`
     font-family:Dosis;
     font-weight: 500;
     line-height: 1.5;
+    @media(max-width:576px) {
+        font-size: 46px;
+        text-align:center;
+        font-weight: 600 !important;
+    }
 `
 
 const CoverDescription = styled.p`
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
-    font-size: 1.17188rem !important;
+    font-size: 1.17188rem;
     margin-bottom: 5rem !important;
     margin-top: 2rem !important;
     font-weight: 300;
@@ -157,6 +162,10 @@ const CoverDescription = styled.p`
     }
     span {
         font-weight: 400 !important;
+    }
+    @media(max-width:576px) {
+        font-size: 16px;
+        text-align:center;
     }
 `
 
@@ -202,10 +211,20 @@ const CallToAction = styled.button`
     font-weight: 600;
     margin: 8px; 
     min-width: 200px !important;
+    @media(max-width:576px) {
+        max-width:200px;
+        margin:8px auto;
+    }
 `
 const CtaWrapper = styled.div`
     display:flex;
     margin-bottom: 10rem !important;
+    @media(max-width:768px) {
+        margin-bottom:1rem;
+    }
+    @media(max-width:576px) {
+        flex-direction:column;
+    }
     .gray {
         color:rgba(255,255,255,0.6);
         background-color: transparent;

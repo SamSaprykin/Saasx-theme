@@ -62,6 +62,9 @@ const SectionTitle = styled.h2`
     font-weight: 500;
     font-size: 1.75781rem;
     line-height: 1.5;
+    @media (max-width: 576px) {
+        font-size: 24px;
+    }
 `
 
 const SectionDescritption = styled.p`
@@ -70,6 +73,9 @@ const SectionDescritption = styled.p`
     font-weight: 300;
     margin-bottom: 3rem;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size: 15px;
+    }
 `
 
 const SectionButton = styled.button`

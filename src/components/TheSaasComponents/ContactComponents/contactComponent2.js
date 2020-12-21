@@ -14,7 +14,7 @@ const ContactComponents2 = () => {
             <Container>
                 <StyledRow>
                    <div className="col-md-6">
-                    <StyledForm className="col-11 col-lg-12">
+                    <StyledForm className="col-12 col-lg-12">
                         <FormGroup className="col-md-12">
                             <StyledInput type="text" id="name" name="name"  placeholder="Your Name" required />
                         </FormGroup>
@@ -80,14 +80,6 @@ const BlockHeader = styled.h5`
     }
 `
 
-const SectionTitle = styled.h2`
-    color: #323d47;
-    letter-spacing: 0.5px;
-    margin-bottom:80px;
-    text-align:center;
-    font-family:Dosis;
-    font-weight: 500;
-`
 
 const SectionBackground = styled.div`
     position: relative;
@@ -98,6 +90,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -138,6 +134,9 @@ const FormGroup  = styled.div`
     font-weight: 300;
     margin-bottom:16px;
     text-align:center;
+    @media(max-width:768px) {
+        margin-bottom:0;
+    }
 `
 
 const StyledInput = styled.input`
@@ -192,6 +191,9 @@ const StyledTextArea = styled.textarea`
         box-shadow: none;
         outline: none;
     }
+    @media(max-width:768px) {
+        margin-bottom:16px;
+    }
 `
 
 const DefaultButton = styled.button`
@@ -219,6 +221,9 @@ const DefaultButton = styled.button`
 const FormInfo = styled.div`
     padding:1.5rem;
     background-color: #fafbfb;
+    @media(max-width:768px) {
+        margin-top:16px;
+    }
 `
 
 const TextInfo = styled.p`
@@ -228,6 +233,9 @@ const TextInfo = styled.p`
     line-height: 1.9;
     color: #757575;
     text-align: left;
+    @media(max-width:768px) {
+        font-size:13.1px;
+    }
 `
 
 const Adress = styled.span`
@@ -240,6 +248,10 @@ const Adress = styled.span`
     line-height: 1.9;
     color: #757575;
     margin-bottom:16px;
+    @media(max-width:768px) {
+        margin-top:32px;
+        font-size:16px;
+    }
 `
 const WrapperContactInfo = styled.div`
     p {

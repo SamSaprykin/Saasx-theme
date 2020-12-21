@@ -65,6 +65,9 @@ const SectionTitle = styled.h2`
     font-weight: 500;
     font-size: 2.10938rem;
     line-height: 1.5;
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 `
 
 const SectionBackground = styled.div`
@@ -76,6 +79,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-bottom: 3rem !important;
+        padding-top:3rem !important;
+    }
 `
 
 const Container = styled.div`
@@ -130,6 +137,9 @@ const SectionButton = styled.button`
     font-weight:600;
     :hover {
         box-shadow:1px 2px 5px 0px #3cd458;
+    }
+    @media (max-width: 576px) {
+        margin:0 auto;
     }
 `
 

@@ -123,16 +123,24 @@ const CoverTitle = styled.h3`
     font-size: 5rem;
     font-family:Dosis;
     line-height: 1.5;
+    @media(max-width:576px) {
+        font-size: 70px;
+        text-align:center;
+    }
 `
 
 const CoverDescription = styled.p`
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
-    font-size: 1.40625rem !important;
+    font-size: 1.40625rem;
     margin-bottom: 3rem !important;
     margin-top: 2rem !important;
     font-weight: 300;
     line-height: 1.9;
+    @media(max-width:576px) {
+        font-size: 18px;
+        text-align:center;
+    }
 `
 
 const CoverCtaWrapper = styled.div`

@@ -70,6 +70,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:576px) {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -110,6 +114,9 @@ const CoverTitle = styled.h3`
     margin-bottom:3rem;
     color: #323d47;
     letter-spacing: 0.5px;
+    @media(max-width:576px) {
+        font-size: 40px;
+    }
 `
 const CoverDescription = styled.p`
     font-size: 1.40625rem !important;
@@ -119,6 +126,9 @@ const CoverDescription = styled.p`
     text-align: left;
     margin-bottom: 3rem;
     font-family: Open Sans;
+    @media(max-width:576px) {
+        font-size: 20px;
+    }
 `
 
 const CoverCta = styled.button`

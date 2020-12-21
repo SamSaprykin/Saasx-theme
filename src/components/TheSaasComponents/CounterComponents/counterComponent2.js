@@ -92,6 +92,10 @@ const SectionBackground = styled.div`
     background-color: #1b8bf9;
     padding-top: 7rem;
     padding-bottom: 7rem;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`

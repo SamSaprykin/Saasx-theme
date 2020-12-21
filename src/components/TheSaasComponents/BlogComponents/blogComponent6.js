@@ -32,10 +32,10 @@ const BlogComponents6 = ({cardData}) => {
                 {
                     cardsData.map((card,index) => {
                         return (
-                            <StyledRow reverse={card.reverse}>
-                                <div className="col-md-6 mh-300">
-                                    <img src={card.image} alt="blog image" />
-                                </div>
+                            <StyledRow reverse={card.reverse} >
+                                <StyledCol className="col-md-6 mh-300" background={card.image}>
+                                    
+                                </StyledCol>
                                 <div className="col-10 col-md-4 mx-auto py-8 text-center text-md-left">
                                     <TextContent>
                                         <BloCategory>
@@ -91,8 +91,8 @@ const SectionBackground = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     margin: 30px 20px 100px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f5f6f7;
+    
+    
 `
 
 const Container = styled.div`
@@ -109,15 +109,26 @@ const StyledRow = styled.div`
     margin-right: 0;
     margin-left: 0;
     flex-direction:${props => (props.reverse ? "row-reverse" : "row")};
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f5f6f7;
     div {
         padding-left:0;
         padding-right:0;
     }
     .mh-300 {
         min-height:300px;
-
     }
     
+    @media(max-width:768px) {
+        margin-bottom:24px;   
+    }
+`
+
+const StyledCol = styled.div`
+    background-image:url(${props => (props.background)});
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 `
 
 const BloCategory = styled.h5`
@@ -155,6 +166,10 @@ const TextContent = styled.div`
 
     justify-content:center;
     flex-direction:column;
+    
+    @media (max-width: 576px) {
+        text-align:center;
+    }
 `
 
 const CtaWrapper = styled.div`

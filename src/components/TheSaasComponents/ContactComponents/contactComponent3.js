@@ -140,6 +140,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -179,6 +183,9 @@ const FormGroup  = styled.div`
     padding-left: 5px;
     font-weight: 300;
     margin-bottom:16px;
+    @media(max-width:768px) {
+        margin-bottom:0;
+    }
 `
 
 const StyledInput = styled.input`
@@ -233,6 +240,9 @@ const StyledTextArea = styled.textarea`
         box-shadow: none;
         outline: none;
     }
+    @media(max-width:768px) {
+        margin-bottom:16px;
+    }
 `
 
 const DefaultButton = styled.button`
@@ -253,10 +263,16 @@ const DefaultButton = styled.button`
         color: #fff;
         box-shadow: 1px 1px 15px 0px rgba(80,161,255,0.7);
     }
+    @media(max-width:768px) {
+        margin-bottom:16px;
+    }
 `
 
 const FormInfo = styled.div`
-    
+    @media(max-width:576px) {
+        text-align:center;
+        padding-top:30px;
+    }
 `
 
 const PlaceInfo = styled.p`
@@ -266,6 +282,9 @@ const PlaceInfo = styled.p`
     font-size: 1.23047rem;
     margin-bottom:8px;
     font-family:Dosis;
+    @media(max-width:576px) {
+        font-size: 17px;
+    }
 `
 
 const TextInfo = styled.p`
@@ -276,6 +295,11 @@ const TextInfo = styled.p`
     color: #757575;
     text-align: left;
     max-width:180px;
+    @media(max-width:576px) {
+        text-align:center;
+        margin:0 auto;
+        font-size: 13.1px;
+    }
 `
 
 
@@ -288,6 +312,10 @@ const MobilesWrapper = styled.div`
         line-height: 1.9;
         color: #757575;
         margin-bottom:0;
+        @media(max-width:576px) {
+            margin:12px 0;
+            font-size: 13.1px;
+        }
     }
 `
 
@@ -300,11 +328,16 @@ const EmailInfo = styled.span`
     color: #757575;
     margin-bottom: 1rem;
     display:block;
+    @media(max-width:576px) {
+            
+        font-size: 13.1px;
+    }
 `
 
 
 
 const SocialWrapper = styled.div`
+    
     h5 {
         line-height: 1.9;
         color: #757575;
@@ -316,6 +349,9 @@ const SocialWrapper = styled.div`
 
 const IconsWrapper = styled.div`
     display:flex;
+    @media(max-width:576px) {
+        justify-content:center;
+    }
     a {
         margin-right: 1rem;
     }

@@ -72,6 +72,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -106,14 +110,21 @@ const StyledRow = styled.div`
 `
 
 const StyledImage = styled.img`
-    margin-left: 1rem !important; 
+    margin-left: 1rem; 
     border-radius: 0.5rem !important;  
+    @media(max-width:576px) {
+        margin:0;
+    }
 `
 const ContentWrapper = styled.div`
     text-align:right;
     display:flex;
     flex-direction:column;
     padding:15px;
+    @media(max-width:576px) {
+        text-align:center;
+        padding:0 0 16px;
+    }
 `
 
 const ContentSubHead = styled.span`
@@ -135,7 +146,9 @@ const ContentTitle = styled.h4`
     margin-bottom: 28px;
     font-family: Dosis;
     line-height: 1.5;
-    
+    @media(max-width:576px) {
+        font-size: 24px;
+    }
 `
 
 const ContentDescription = styled.p`
@@ -144,6 +157,9 @@ const ContentDescription = styled.p`
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
+    @media(max-width:576px) {
+        font-size: 14px;
+    }
 `
 
 ContentComponents1.propTypes = {

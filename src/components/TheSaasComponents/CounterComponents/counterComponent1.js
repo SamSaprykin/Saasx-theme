@@ -90,6 +90,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -122,6 +126,9 @@ const StyledRow = styled.div`
 
 const Item = styled.div`
     text-align:center;
+    @media(max-width:768px) {
+        margin-bottom:30px;
+    }
 `
 
 const TitleItem = styled.h5`

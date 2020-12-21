@@ -99,6 +99,13 @@ const TextParallax = styled.h3`
     font-family:Dosis;
     font-size:80px;
     line-height: 1.5;
+    @media(max-width:768px) {
+      width:100%;
+      text-align:center;
+    }
+    @media(max-width:576px) {
+      font-size:60px;
+    }
 `
 
 ContentComponents5.propTypes = {

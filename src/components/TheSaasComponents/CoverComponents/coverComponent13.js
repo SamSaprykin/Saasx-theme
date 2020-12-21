@@ -139,6 +139,9 @@ const CoverTitle = styled.h3`
     line-height: 1.5;
     margin-bottom: 2rem !important;
     margin-top: 2rem !important;
+    @media(max-width:576px) {
+        font-size: 40px;
+    }
 `
 
 const CoverDescription = styled.p`
@@ -148,6 +151,9 @@ const CoverDescription = styled.p`
     margin-bottom: 1rem;
     font-weight: 300;
     line-height: 1.9;
+    @media(max-width:576px) {
+        font-size: 20px;
+    }
 `
 
 const CoverCtaWrapper = styled.div`

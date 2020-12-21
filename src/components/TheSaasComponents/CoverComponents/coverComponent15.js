@@ -72,6 +72,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media(max-width:768px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -121,6 +125,9 @@ const CoverDescription = styled.p`
     text-align: left;
     margin-bottom: 2rem;
     font-family: Open Sans;
+    @media(max-width:576px) {
+        font-size: 16.5px;
+    }
 `
 
 const CoverCta = styled.button`
@@ -135,6 +142,9 @@ const CoverCta = styled.button`
     font-weight: 600;
     font-family:Open Sans;
     line-height: 1.9;
+    @media(max-width:576px) {
+        margin-bottom:16px;
+    }
     :hover{
         color: #fff;
         box-shadow: 1px 1px 15px 0px  #926dde;

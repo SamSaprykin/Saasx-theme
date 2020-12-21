@@ -73,6 +73,9 @@ const SectionTitle = styled.h2`
     font-family:Dosis;
     font-weight: 500;
     font-size: 1.75781rem;
+    @media (max-width: 576px) {
+        text-align:center;
+    }
 `
 
 const SectionDescription = styled.p`
@@ -83,6 +86,9 @@ const SectionDescription = styled.p`
     font-family:Open Sans;
     a {
         color: #50a1ff;
+    }
+    @media (max-width: 576px) {
+        text-align:center;
     }
 `
 

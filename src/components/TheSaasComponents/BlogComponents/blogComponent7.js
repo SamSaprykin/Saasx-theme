@@ -37,7 +37,7 @@ const BlogComponents7 = ({cardData}) => {
                             return (
                                 <div className="col-md-10 col-xl-8 mx-auto">
                                     <BlogCard>
-                                        <Link to={card.linkTo}><img src={card.image} alt="Card image cap" /></Link>
+                                        <Link to={card.linkTo}><img src={card.image} alt="Card image cap" className="card-image" /></Link>
                                         <TextContent>
                                             <BlogTitle>
                                                {card.title}
@@ -99,6 +99,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -127,6 +131,9 @@ const BlogTitle = styled.p`
     letter-spacing: 0.5px;
     font-size: 1.52344rem;
     font-family:Dosis;
+    @media(max-width:576px) {
+       font-size:21px;
+    }
 `
 
 
@@ -135,6 +142,7 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    
 `
 
 const BlogCard = styled.div`
@@ -154,9 +162,14 @@ const BlogCard = styled.div`
     :hover {
         box-shadow: 0 0 48px rgba(0, 0, 0, 0.06);
     }
+    
     a {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+        
+        @media(max-width:576px) {
+            display:none;
+        }
         
         img {
             width:100%;
@@ -180,10 +193,15 @@ const BlogCardText = styled.h5`
 `
 
 const TextContent = styled.div`
-    padding: 3rem !important;
+    padding: 3rem ;
     text-align:left;
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
+    @media(max-width:576px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 2rem;
+    }
 `
 
 const CtaWrapper = styled.div`
@@ -192,6 +210,10 @@ const CtaWrapper = styled.div`
     a {
         display:flex;
         align-items:center;
+        @media(max-width:576px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
     h5 {
         color: #50a1ff;

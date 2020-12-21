@@ -18,7 +18,7 @@ const BlogComponents5 = () => {
         <SectionBackground >
             <Container>
                 <StyledRow>
-                    <div className="col-md-6 col-lg-5 mx-auto">
+                    <div className="col-md-5 mx-auto">
                         <img src={cardData.image} />
                     </div>
                     <div className="col-md-6 col-lg-6">
@@ -77,6 +77,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #f5f6f7;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -105,6 +109,9 @@ const StyledRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    @media(max-width:768px) {
+        align-items:center;
+    }
 `
 
 

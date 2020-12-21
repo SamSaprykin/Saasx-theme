@@ -101,6 +101,10 @@ const SectionBackground = styled.div`
     padding-top: 7rem;
     padding-bottom: 7rem;
     background-color: #363636;
+    @media(max-width:768px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -137,17 +141,24 @@ const Item = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    @media(max-width:576px) {
+      margin-bottom:30px;
+    }
 `
 
 const TitleItem = styled.h5`
     color:rgba(255,255,255,0.85);
-    font-size: 3.04688rem !important;
+    font-size: 3.04688rem;
     font-family:Dosis;
     font-weight: 400;
     color: #fff;
     letter-spacing: 0.5px;
     margin-bottom: 0 !important;
     text-align: right !important;
+    @media(max-width:768px) {
+      padding:0;
+      font-size:2.5rem;
+    }
 `
 
 const DescriptionItem = styled.span`
@@ -168,9 +179,12 @@ const WrapperContent = styled.div`
     text-align:left;
     
     i {
-      font-size: 1.64063rem !important;
+      font-size: 1.64063rem;
       color: #bfc5ca !important;
       margin-right: 1rem !important;
+      @media(max-width:576px) {
+        font-size: 1.3rem;
+      }
     }
 `
 const Column = styled.div`

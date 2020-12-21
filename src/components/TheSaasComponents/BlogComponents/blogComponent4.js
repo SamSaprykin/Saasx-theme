@@ -34,7 +34,7 @@ const BlogComponents4 = ({cardData}) => {
                     {
                         cardsData.map((card,index) => {
                             return (
-                                <div className="col-md-6 col-lg-4">
+                                <div className="col-lg-4">
                                    <BlogCard>
                                         <TextContent>
                                             <BlogTitle>
@@ -93,6 +93,9 @@ const SectionTitle = styled.h2`
     font-size: 33.75px;
     font-weight: 500;
     margin-bottom: .5rem;
+    @media(max-width:576px) {
+        font-size: 1.9rem;
+    }
 `
 
 const SectionSubhead = styled.h5`
@@ -112,7 +115,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #191919;
     margin: 30px 20px 100px;
-    
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -156,6 +162,8 @@ const BlogTitle = styled.h5`
         letter-spacing: 0.5px;
         line-height: 1.5;
     }
+    
+    
 `
 
 const BlogCardText = styled.h5`
@@ -187,6 +195,12 @@ const BlogCard = styled.div`
     cursor:pointer;
     :hover {
         box-shadow: 0 1px 35px rgba(0, 0, 0, 0.07); 
+    }
+    @media(max-width:768px) {
+        margin-bottom:32px;
+    }
+    @media(max-width:576px) {
+        margin-bottom:24px;
     }
 `
 

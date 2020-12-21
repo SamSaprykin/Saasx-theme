@@ -17,17 +17,17 @@ const ContactComponents6 = () => {
 
                 <StyledRow>
                     
-                        <StyledForm className="col-11 col-lg-12">
-                            <FormGroup className="col-md-3">
+                        <StyledForm>
+                            <FormGroup className="col-sm-6 col-lg-3">
                                 <StyledInput type="text" id="name" name="name"  placeholder="Your Name" required />
                             </FormGroup>
-                            <FormGroup className="col-md-3">
+                            <FormGroup className="col-sm-6 col-lg-3">
                                 <StyledInput type="text" id="name" name="email"  placeholder="Email Adress" required />
                             </FormGroup>
-                            <FormGroup className="col-md-3">
+                            <FormGroup className="col-sm-6 col-lg-3">
                                 <StyledInput type="text" id="name" name="company"  placeholder="Company name" required />
                             </FormGroup>
-                            <FormGroup className="col-md-3">
+                            <FormGroup className="col-sm-6 col-lg-3">
                                 <DefaultButton id="submit"  type="submit">Send Message</DefaultButton>
                             </FormGroup>
                         </StyledForm>
@@ -66,10 +66,13 @@ const BlockHeader = styled.h5`
 const SectionTitle = styled.h2`
     color: #323d47;
     letter-spacing: 0.5px;
-    margin-bottom:80px;
+    margin-bottom:40px;
     text-align:center;
     font-family:Dosis;
     font-weight: 500;
+    @media(max-width:576px) {
+        margin-bottom:8px;
+    }
 `
 
 const SectionBackground = styled.div`
@@ -81,6 +84,10 @@ const SectionBackground = styled.div`
     padding-bottom: 7rem;
     background-color: #fafbfb;
     margin: 30px 20px 100px;
+    @media(max-width:768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -120,6 +127,9 @@ const FormGroup  = styled.div`
     padding-left: 5px;
     font-weight: 300;
     margin-bottom:16px;
+    @media(max-width:576px) {
+        margin-bottom:0;
+    }
 `
 
 const StyledInput = styled.input`
@@ -138,6 +148,8 @@ const StyledInput = styled.input`
     @media (max-width:756px){
         margin-bottom:16px;
         height:56px;
+        padding: 5px 10px;
+        height:40px;
     }    
     :focus {
         border-color: #eaeff4;
@@ -149,9 +161,13 @@ const StyledInput = styled.input`
 const StyledForm = styled.form`
     margin:0 auto;
     border-radius: .25rem !important;
-    padding: 2rem !important;
+    padding: 2rem;
     display:flex;
     justify-content:space-between;
+    flex-wrap:wrap;
+    @media (max-width:756px){
+        padding: 15px;
+    }   
 `
 
 
@@ -172,7 +188,9 @@ const DefaultButton = styled.button`
     padding: 6px 26px 6px;
     cursor:pointer;
     width:100%;
-
+    @media (max-width: 576px){
+        line-height: 1.9;
+    } 
     :hover{
         color: #fff;
         box-shadow: 1px 1px 15px 0px rgba(80,161,255,0.7);
