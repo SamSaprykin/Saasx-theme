@@ -106,6 +106,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-top: 7rem;
     padding-bottom: 7rem;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -132,6 +136,9 @@ const Container = styled.div`
     }
     .reversed {
         flex-direction:row-reverse;
+        @media (max-width: 576px) {
+            flex-direction:column-reverse;
+        }
     }
     hr {
         border-top: 1px solid rgba(0,0,0,0.1);
@@ -154,6 +161,10 @@ const StyledRow = styled.div`
         text-align: left !important;
         margin-right: auto !important;
         margin-left: 0 !important;
+       
+    }
+    @media (max-width: 576px) {
+        flex-direction:column-reverse;
     }
 `
 
@@ -161,6 +172,10 @@ const HeaderSection = styled.div`
     text-align: center;
     max-width: 70%;
     margin: 0 auto 70px;
+    @media (max-width: 576px) {
+        max-width: 90%;
+        margin-bottom:20px;
+    }
 `
 
 const TitleSection = styled.h4`
@@ -172,6 +187,9 @@ const TitleSection = styled.h4`
     line-height: 1.5;
     margin-bottom:50px;
     font-weight:400;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -191,7 +209,9 @@ const TitleItem = styled.h5`
     line-height: 1.5;
     margin-bottom: .5rem;
     font-family:Dosis;
-
+    @media (max-width: 576px) {
+        text-align:center;
+    }
 `
 
 const Date = styled.span`
@@ -219,6 +239,10 @@ const NumerItem = styled.p`
     font-size: 4.6875rem !important;
     opacity: .1 !important;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        margin-top:16px;
+        text-align:center;
+    }
 `
 
 

@@ -142,15 +142,21 @@ const TitleSection = styled.h3`
         margin-right:8px;
         display:block;
     }
+    @media (max-width: 576px) {
+        font-size:28px;
+    }
 `
 const DescriptionSection = styled.p`
-    font-size: 1.17188rem !important;
+    font-size: 1.17188rem ;
     margin-top: 2rem !important;
     margin-bottom: 1rem;
     font-weight: 300;
     line-height: 1.9;
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size:17px;
+    }
 `
 
 const CtaSection = styled.button`
@@ -173,6 +179,9 @@ const TypingSpan = styled.span`
     font-size: 2.57813rem;
     font-family:Dosis;
     line-height: 1.5;
+    @media (max-width: 576px) {
+        font-size:28px;
+    }
 `
 
 HeaderComponent8.propTypes = {

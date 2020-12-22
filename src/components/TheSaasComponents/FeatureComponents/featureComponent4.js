@@ -50,7 +50,7 @@ const FeatureComponent4 = () => {
                             }
                             </StyledRow>
                         </div>
-                        <div className="col-md-5 text-center">
+                        <div className="col-md-6 align-self-end text-center">
                             <AnimeImage>
                                 <img src="/phone-4.png" />
                             </AnimeImage>

@@ -157,6 +157,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-top: 7rem; 
     padding-bottom: 7rem;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -202,6 +206,9 @@ const HeaderSection = styled.div`
     text-align: center;
     max-width: 70%;
     margin: 0 auto 70px;
+    @media (max-width: 576px) {
+        max-width: 90%;
+    }
 `
 
 const TitleSection = styled.h4`
@@ -212,6 +219,9 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:50px;
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -221,6 +231,9 @@ const DescriptionSection = styled.p`
     line-height: 1.9;
     color: #757575;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size: 15.8px;
+    }
 `
 
 const BlogCard = styled.div`
@@ -242,6 +255,9 @@ const ImageContainer = styled.div`
     position:relative;
     img {
         border-radius: 0.75rem !important;
+    }
+    @media (max-width: 576px) {
+        margin-bottom:24px;
     }
 `
 
@@ -370,6 +386,9 @@ const StepIcon = styled.div`
     text-align: center;
     margin-right:64px;
     margin-left:20px;
+    @media (max-width: 576px) {
+        margin-right:30px;
+    }
     span {
         color: #bfc5ca;
         background-color: #eaeff4;

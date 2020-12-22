@@ -133,6 +133,10 @@ const SectionBackground = styled.div`
         border-radius: inherit;
         opacity:0.1;
     }
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -170,6 +174,9 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     align-items:center;
+    @media (max-width: 576px) {
+        padding:0 15px;
+    }
     div {
         padding:0;
     }
@@ -184,6 +191,9 @@ const TitleSection = styled.h4`
     font-size: 3.5rem;
     font-weight: 200;
     line-height: 1.5;
+    @media (max-width: 576px) {
+        font-size:49px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -193,6 +203,9 @@ const DescriptionSection = styled.p`
     margin-bottom: 3rem !important;
     line-height: 1.9;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        font-size:13px;
+    }
 `
 
 const InformationSection = styled.div`
@@ -202,6 +215,9 @@ const InformationSection = styled.div`
     line-height: 1.9;
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
+    @media (max-width: 768px) {
+        font-size: 1.5rem !important;
+    }
 `
 
 const ButtonClose = styled.a`

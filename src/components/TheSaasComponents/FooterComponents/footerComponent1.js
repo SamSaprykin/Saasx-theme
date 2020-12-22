@@ -129,6 +129,9 @@ const Copyright = styled.span`
     font-family:Open Sans;
     line-height: 1.9;
     color: #757575;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
 `
 
 const Social = styled.div`

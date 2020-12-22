@@ -96,6 +96,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-top: 7rem;
     padding-bottom: 7rem;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -140,6 +144,9 @@ const HeaderSection = styled.div`
     text-align: center;
     max-width: 70%;
     margin: 0 auto 70px;
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
 `
 
 const TitleSection = styled.h4`
@@ -176,13 +183,23 @@ const ListSteps = styled.ol`
         width: 2px;
         margin-left: -1px;
         background-color: #50a1ff;
+        @media (max-width: 576px) {
+            left: 8px;
+        }
     }
     .reversed {
         margin-left: 50%;
         padding-left: 2.5rem;
         padding-right: 0;
         text-align: left;
+        @media (max-width: 576px) {
+            margin-left:0;
+        }
         :before {
+            @media (max-width: 576px) {
+                top: 1.25rem;
+                left: 1px;
+            }
             right: auto;
             left: -8px;
         }
@@ -195,6 +212,12 @@ const TimelineItem = styled.li`
     padding: 1rem 0 3rem;
     padding-right: 2.5rem;
     text-align: right;
+    @media (max-width: 576px) {
+        width: 100%;
+        padding-right:0;
+        text-align:left;
+        padding-left: 2.5rem;
+    }
     :before {
         content: '';
         position: absolute;
@@ -206,6 +229,10 @@ const TimelineItem = styled.li`
         border-radius: 50%;
         border: 2px solid #50a1ff;
         background-color: #fff;
+        @media (max-width: 576px) {
+            top: 1.25rem;
+            left: 1px;
+        }
     }
 `
 

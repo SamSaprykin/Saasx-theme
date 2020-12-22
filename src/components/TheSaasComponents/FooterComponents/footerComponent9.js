@@ -162,6 +162,10 @@ const Social = styled.div`
         background-color: #b00;
     }
     margin:0 auto;
+    @media (max-width: 768px) {
+        margin-bottom:24px;
+        
+    }
 `
 
 const cycle = keyframes`
@@ -205,6 +209,7 @@ const Navbar = styled.div`
     margin-bottom: 0;
     max-height:120px;
     flex-wrap:wrap;
+    
 `
 
 const NavLink = styled(Link)`
@@ -216,6 +221,9 @@ const NavLink = styled(Link)`
     font-size: .9375rem;
     font-family:Open Sans;
     width:160px;
+    @media (max-width: 576px) {
+        width:120px;
+    }
 `
 
 

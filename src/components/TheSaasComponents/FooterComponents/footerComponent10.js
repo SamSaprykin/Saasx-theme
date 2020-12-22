@@ -127,8 +127,11 @@ const StyledRow = styled.div`
     
     div {
         text-align:left;
+        @media (max-width: 768px) {
+            margin-bottom:24px;
+        }
     }
-
+    
 `
 
 const TitleInfo = styled.h5`
@@ -198,6 +201,7 @@ const Copyright = styled.span`
     line-height: 1.9;
     color: #757575;
     opacity: .7 !important;
+    
 `
 
 FooterComponent10.propTypes = {

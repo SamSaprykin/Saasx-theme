@@ -211,6 +211,9 @@ const NavLink = styled(Link)`
     :hover {
         color: rgba(255,255,255,0.9);
     }
+    @media (max-width: 576px) {
+        font-size:13px;
+    }
 `
 
 const Copyright = styled.span`

@@ -158,6 +158,9 @@ const StyledRow = styled.div`
     text-align:center;
     div {
         text-align:left;
+        @media (max-width: 768px) {
+            margin-bottom:24px;
+        }
     }
 
 `

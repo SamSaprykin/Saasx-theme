@@ -26,7 +26,7 @@ const FeatureComponent10 = () => {
                                 <img src="/header-gradient.jpg" />
                             </AnimeImage>
                     </div>
-                    <div className="col-10 col-lg-6 mx-auto text-center text-lg-left">
+                    <div className="col-lg-6 mx-auto">
                             <SectionTitle>{featureData.title}</SectionTitle>
                             <SectionDescription>{featureData.descritption}</SectionDescription>
                             <hr />
@@ -88,6 +88,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -108,10 +112,16 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     text-align:center;
+    @media (max-width: 576px) {
+        flex-direction:column-reverse;
+    }
     hr {
         width: 5% !important;
         margin: 2rem auto;
         border-top: 1px solid rgba(117,117,117,0.09);
+        @media (max-width: 576px) {
+            margin: 1rem auto;
+        }
     }
     .text-align-left {
         text-align:left;
@@ -129,7 +139,10 @@ const SectionTitle = styled.h2`
     font-size: 2.10938rem;
     line-height: 1.5;
     margin-bottom: .5rem;
-    
+    @media (max-width: 576px) {
+        font-size: 30px;
+        text-align:left;
+    }
 `
 
 const SectionDescription = styled.p`
@@ -140,6 +153,9 @@ const SectionDescription = styled.p`
     letter-spacing: 0.5px;
     font-weight: 300;
     margin-bottom: 1rem;
+    @media (max-width: 576px) {
+        text-align:left;
+    }
 `
 
 const WrapperList = styled.div`
@@ -174,6 +190,10 @@ const CallToAction = styled.a`
     margin-bottom:1rem;
     display:block;
     max-width:160px;
+    @media (max-width: 576px) {
+        text-align:left;
+        margin-bottom:24px;
+    }
     i {
         font-size: 10px !important;
     }

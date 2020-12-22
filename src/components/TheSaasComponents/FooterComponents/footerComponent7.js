@@ -195,6 +195,9 @@ const NavLink = styled(Link)`
     letter-spacing: 1px;
     font-size: 0.8rem;
     word-spacing: 2px;
+    @media (max-width: 576px) {
+        font-size:10.5px;
+    }
 `
 
 

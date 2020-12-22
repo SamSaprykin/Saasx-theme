@@ -72,6 +72,10 @@ const SectionBackground = styled.div`
     padding-top: 7rem;
     padding-bottom: 7rem;
     background-image: linear-gradient(120deg, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`

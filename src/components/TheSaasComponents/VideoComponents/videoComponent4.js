@@ -175,6 +175,9 @@ const HeaderSection = styled.div`
     text-align: center;
     max-width: 70%;
     margin: 0 auto 70px;
+    @media (max-width: 576px) {
+        max-width: 90%;
+    }
 `
 
 const HeaderCard = styled.h3`
@@ -189,7 +192,14 @@ const HeaderCard = styled.h3`
     font-size: 1.52344rem;
     letter-spacing: 0.5px;
     font-weight: 500;
-
+    @media (max-width: 768px) {
+        width:80%;
+    }
+    @media (max-width: 576px) {
+        width:100%;
+        font-size:22px;
+        
+    }
 `
 
 const SubheadSection = styled.span`
@@ -212,6 +222,9 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:50px;
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -333,63 +346,14 @@ const ButtonOpen  = styled.a`
     width: 72px;
     height: 72px;
   }
+  @media (max-width: 768px) {
+    top:75%;
+  }
+
 `
 
-const ListSteps = styled.ol`
-  padding-left:40px;
-`
 
-const Step = styled.li`
-    display: flex;
-    padding: 1rem 0;
-    list-style: none;
-    text-align:left;
-    h5 {
-        font-weight: 500;
-        color: #323d47;
-        letter-spacing: 0.75px;
-        line-height: 1.5;
-        font-family:Dosis;
-        font-size: 1.05469rem;
-    }
-    p {
-        font-family: Open Sans;
-        font-size: .9375rem;
-        font-weight: 300;
-        line-height: 1.9;
-        color: #757575;
-        letter-spacing: 0.15px;
-    }
-`
-const StepIcon = styled.div`
-    position: relative;
-    
-    flex-shrink: 0;
-    text-align: center;
-    margin-right:64px;
-    margin-left:20px;
-    span {
-        color: #bfc5ca;
-        background-color: #eaeff4;
-        font-size: 1.5rem;
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        display:block;
-        text-align:center;
-        border-radius: 10rem;
-        font-family:Open Sans;
-        :before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 48px;
-            bottom: -2rem;
-            margin-left: -1px;
-            border-left: 2px dashed #eaeff4;
-        }
-    }
-`
+
 
 VideoComponent4.propTypes = {
   

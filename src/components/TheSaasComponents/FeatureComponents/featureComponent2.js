@@ -68,6 +68,10 @@ const SectionBackground = styled.div`
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     background-color: #fafbfb;
+    @media (max-width: 768px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 `
 
 const Container = styled.div`
@@ -99,6 +103,7 @@ const StyledRow = styled.div`
     text-align:center;
     div {
         align-self: center !important;
+        
     }
     hr {
         width: 50px !important;
@@ -109,8 +114,11 @@ const StyledRow = styled.div`
         text-align:left;
         padding-top: 15px;
         padding-bottom: 15px;
+        @media (max-width: 576px) {
+            text-align:center;
+        }
     }
-
+    
 `
 
 const SectionTitle = styled.h2`
@@ -145,6 +153,9 @@ const ButtonFeature = styled.button`
     line-height: 2.2;
     font-family:Open Sans;
     border-radius: 10rem;
+    @media (max-width: 576px) {
+        margin-bottom:2rem;
+    }
     :hover {
         box-shadow: 0 3px 10px #50a1ff;
     }

@@ -134,7 +134,11 @@ const StyledRow = styled.div`
         padding-top: 15px;
         padding-bottom: 15px;
     }
-
+    div {
+        @media (max-width: 576px) {
+            padding:12px;
+        }
+    }
 `
 
 const Navbar = styled.div`

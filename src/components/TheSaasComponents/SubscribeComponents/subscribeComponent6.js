@@ -67,6 +67,10 @@ const SectionBackground = styled.div`
     padding-top: 7rem;
     padding-bottom: 7rem;
     background-color: #56a9ef;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -111,6 +115,9 @@ const StyledRow = styled.div`
         position:relative;
         height: calc(2em + .75rem + 2px);
         margin-top: 2rem !important;
+        @media (max-width: 576px) {
+            padding:0 15px;
+        }
     }
 `
 
@@ -122,6 +129,9 @@ const TitleSection = styled.h2`
     line-height: 1.5;
     font-family:Dosis;
     margin-bottom:28px;
+    @media (max-width: 576px) {
+        font-size: 30px;
+    }
 `
 
 const SubhaedSection = styled.span`
@@ -151,6 +161,10 @@ const StyledButton = styled.button`
     right:0;
     height: 100%;
     font-family:Open Sans;
+    @media (max-width: 576px) {
+        right:15px;
+        padding:7px 24px 6px;
+    }
     i {
         font-size: 9px !important;
         margin-left: .75rem !important;
@@ -177,6 +191,10 @@ const StyledInput = styled.input`
     :placeholder {
         color: white !important;
     }
+    @media (max-width: 576px) {
+        font-size: .8625rem; 
+        padding-left: 2rem; 
+    }
 `
 
 const Prepand = styled.div`
@@ -201,6 +219,10 @@ const IconWrapper = styled.span`
     i {
         padding-left:16px;
         color: rgba(255,255,255,0.8);
+    }
+    @media (max-width: 576px) {
+        padding: .375rem .5rem;
+        font-size:.8rem;
     }
 `
 

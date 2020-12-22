@@ -100,6 +100,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -121,6 +125,10 @@ const Container = styled.div`
     @media (min-width: 1200px) {
         max-width: 1140px;
     }
+    hr {
+        width: 50px;
+        margin: 2.5rem auto 1.5rem;
+    }
 `
 
 const StyledRow = styled.div`
@@ -129,11 +137,7 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     text-align:center;
-    hr {
-        width: 5% !important;
-        margin: 2rem auto;
-        border-top: 1px solid rgba(117,117,117,0.09);
-    }
+    
     .text-align-left {
         text-align:left;
         padding-top: 15px;
@@ -147,6 +151,9 @@ const StyledRow = styled.div`
             justify-content: center;
             padding-left: 0;
             margin-bottom: 2rem;
+            @media (max-width: 768px) {
+                flex-wrap:wrap;
+            }
             .react-tabs__tab--selected {
                 p {
                     color:white;
@@ -156,12 +163,22 @@ const StyledRow = styled.div`
             .text-tab-0 {
                 border-top-left-radius: 10rem;
                 border-bottom-left-radius: 10rem;
+                
             }
             .text-tab-5 {
                 border-top-right-radius: 10rem;
                 border-bottom-right-radius: 10rem;
             }
-            
+            @media (max-width: 768px) {
+                .item-tab {
+                    width:150px;
+                    p {
+                        border-radius:10rem;
+                        border-width:1px;
+                        margin:8px 12px;
+                    }
+                }
+            }
             li {
                 min-width: 120px;
                 text-align: center;

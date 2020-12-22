@@ -104,6 +104,9 @@ const TitleSection = styled.h3`
     letter-spacing: 0.5px;
     font-family:Dosis;
     margin-bottom: .5rem;
+    @media (max-width: 576px) {
+        font-size:32px;
+    }
 `
 const DescriptionSection = styled.p`
     font-size: 1.40625rem !important;
@@ -114,6 +117,9 @@ const DescriptionSection = styled.p`
     text-align: left;
     font-family:Open Sans;
     letter-spacing:0.5px;
+    @media (max-width: 576px) {
+        font-size:17px;
+    }
 `
 
 HeaderComponent9.propTypes = {

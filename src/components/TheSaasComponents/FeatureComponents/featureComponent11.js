@@ -101,6 +101,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -118,6 +122,9 @@ const Container = styled.div`
     .max-width {
         width: 100% !important;
         margin: 5rem 0;
+        @media (max-width: 576px) {
+            margin: 3rem auto;
+        }
     }
     @media (min-width: 576px) {
         max-width: 540px;
@@ -149,7 +156,9 @@ const StyledRow = styled.div`
         padding-top: 15px;
         padding-bottom: 15px;
     }
-
+    @media (max-width: 576px) {
+        flex-direction:column-reverse;
+    }
 `
 
 const SubTitle = styled.span`
@@ -184,6 +193,9 @@ const SectionTitle = styled.h2`
     font-weight: 400;
     font-size: 2.10938rem;
     margin-bottom: .5rem;
+    @media (max-width: 576px) {
+        font-size: 30px; 
+    }
 `
 
 const TitleInfo = styled.h4`
@@ -203,6 +215,9 @@ const DescriptionInfo = styled.p`
     line-height: 1.9;
     color: #757575;
     text-align: left;
+    @media (max-width: 576px) {
+        margin-bottom:16px;
+    }
 `
 
 FeatureComponent11.propTypes = {

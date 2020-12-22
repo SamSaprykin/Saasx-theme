@@ -87,6 +87,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -131,6 +135,12 @@ const StyledRow = styled.div`
         flex-direction:column;
         flex-wrap:wrap;
         max-height:140px;
+        @media (max-width: 576px) {
+            max-height:300px;
+        }
+    }
+    @media (max-width: 576px) {
+        flex-direction:column-reverse;
     }
 `
 
@@ -143,7 +153,10 @@ const SectionTitle = styled.h2`
     font-size: 2.10938rem;
     line-height: 1.5;
     margin-bottom: .5rem;
-    
+    @media (max-width: 576px) {
+        font-size:28px;
+        text-align:left;
+    }
 `
 
 const SectionDescription = styled.p`
@@ -154,11 +167,16 @@ const SectionDescription = styled.p`
     letter-spacing: 0.5px;
     font-weight: 300;
     margin-bottom: 1rem;
+    @media (max-width: 576px) {
+        text-align:left;
+        font-size:16px;
+    }
 `
 
 const WrapperList = styled.div`
     display:flex;
     margin-bottom: 1rem;
+    
     li {
         margin:0;
         font-size: 14px !important;
@@ -184,12 +202,16 @@ const CallToAction = styled.a`
     line-height: 1.9;
     letter-spacing: 2px;
     cursor:pointer;
-    margin-top: 3rem !important;
+    margin-top: 3rem ;
     margin-bottom:1rem;
     display:block;
     max-width:160px;
     i {
         font-size: 10px !important;
+    }
+    @media (max-width: 576px) {
+        text-align:left;
+        margin:24px 0;
     }
 `
 

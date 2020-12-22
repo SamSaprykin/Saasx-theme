@@ -79,7 +79,7 @@ class VideoComponent6 extends React.Component {
                                 
                             </Modal>
                           </div>
-                          <div className="media align-items-center mt-7 text-left">
+                          <div className="col-md-6">
                                 <ImageContainer>
                                     <img  src={processData.imageCover} alt="Card image cap" />
                                 </ImageContainer>
@@ -157,8 +157,12 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     align-items:center;
+    @media (max-width: 576px) {
+        padding:15px;
+    }
     div {
         padding:0;
+        
     }
 `
 const TitleSection = styled.h4`
@@ -169,6 +173,9 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:8px;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -178,6 +185,9 @@ const DescriptionSection = styled.p`
     line-height: 1.9;
     color: #757575;
     margin-bottom:0;
+    @media (max-width: 576px) {
+        font-size:13px;
+    }
 `
 
 
@@ -294,6 +304,9 @@ const Media = styled.div`
     margin-top: 3rem !important;
     align-items:center;
     cursor:pointer;
+    @media (max-width: 576px) {
+        margin: 2rem 0;
+    }
 `
 
 const CallToAction = styled.span`

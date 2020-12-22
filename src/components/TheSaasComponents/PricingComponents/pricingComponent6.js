@@ -175,6 +175,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-top: 7rem; 
     padding-bottom: 7rem;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -226,11 +230,14 @@ const TitleSection = styled.h5`
     letter-spacing: 0.5px;
     letter-spacing: 0.5px;
     font-weight: 600 !important;
-    font-size: 3.04688rem !important;
+    font-size: 3.04688rem;
     margin-bottom: 1rem;
     font-family:Open Sans;
     max-width:330px;
     line-height: 1.3;
+    @media (max-width: 576px) {
+        font-size:40px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -258,6 +265,9 @@ const CtaSection = styled(Link)`
     }
     :hover {
         color: #50a1ff;
+    }
+    @media (max-width: 576px) {
+        margin-bottom:24px;
     }
 `
 
@@ -359,7 +369,7 @@ const CardHeaderTitle = styled.h5`
 `
 
 const Price = styled.h2`
-    font-size: 3.04688rem !important;
+    font-size: 3.04688rem;
     font-weight: 600;
     color: #191919 !important;
     letter-spacing: 0.5px;
@@ -367,6 +377,9 @@ const Price = styled.h2`
     margin-top:20px;
     line-height: 1.9;
     margin-bottom: 1rem;
+    @media (max-width: 576px) {
+        font-size:34px;
+    }
 `
 
 const CardBody = styled.div`

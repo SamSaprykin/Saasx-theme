@@ -99,6 +99,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 `
 
 const Container = styled.div`
@@ -128,6 +132,9 @@ const StyledRow = styled.div`
     margin-right: -15px;
     margin-left: -15px;
     text-align:center;
+    @media (max-width: 576px) {
+        flex-direction:column-reverse;
+    }
     hr {
         width: 5% !important;
         margin: 2rem auto;
@@ -148,6 +155,9 @@ const SectionTitle = styled.h2`
     font-weight: 500;
     font-size: 2.10938rem;
     margin-bottom: .5rem;
+    @media (max-width: 576px) {
+        font-size: 24px;
+    }
 `
 
 const SectionDescription = styled.p`
@@ -183,6 +193,9 @@ const TitleItem = styled.h5`
     line-height: 1.5;
     letter-spacing: 0.75px;
     margin-bottom: .5rem;
+    @media (max-width: 576px) {
+        font-size: 18px;
+    }
 `
 
 const DescriptionItem = styled.p`

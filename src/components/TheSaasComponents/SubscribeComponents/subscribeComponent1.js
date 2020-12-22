@@ -102,6 +102,10 @@ const SectionBackground = styled.div`
         border-radius: inherit;
         opacity: .7;
     }
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -132,6 +136,7 @@ const Container = styled.div`
         border: 1px solid #f1f2f3;
         cursor:pointer;
     }
+    
 `
 
 const StyledRow = styled.div`
@@ -142,6 +147,9 @@ const StyledRow = styled.div`
     text-align:center;
     align-items:center;
     flex-direction:column;
+    @media (max-width: 576px) {
+        padding:0 15px;
+    }
 `
 
 const TitleSection = styled.h2`
@@ -152,6 +160,9 @@ const TitleSection = styled.h2`
     line-height: 1.5;
     margin-bottom: 32px;
     font-family:Dosis;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionSection = styled.p`

@@ -126,6 +126,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -199,6 +203,9 @@ const SectionInfo = styled.p`
     font-family:Open Sans;
     font-weight: 300;
     margin-bottom:80px;
+    @media (max-width: 768px) {
+        margin-bottom:40px;
+    }
 `
 
 
@@ -218,7 +225,10 @@ const ItemWrapper = styled.div`
 const Lead = styled.p`
     color: #926dde;
     font-size: 2.34375rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem ;
+    @media (max-width: 768px) {
+        margin: 2.5rem 0;
+    }
 `
 
 const TitleItem = styled.h5`

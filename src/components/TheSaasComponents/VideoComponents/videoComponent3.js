@@ -125,6 +125,10 @@ const SectionBackground = styled.div`
         border-radius: inherit;
         opacity: .5;
     }
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -165,6 +169,9 @@ const HeaderSection = styled.div`
     margin: 0 auto 70px;
     position:relative;
     z-index:100;
+    @media (max-width: 576px) {
+        max-width: 90%;
+    }
 `
 
 const TitleSection = styled.h4`
@@ -175,6 +182,9 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:50px;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionSection = styled.p`

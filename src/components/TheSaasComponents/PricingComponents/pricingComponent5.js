@@ -139,6 +139,10 @@ const SectionBackground = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-top: 7rem; 
     padding-bottom: 7rem;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -204,6 +208,9 @@ const TitleSection = styled.h5`
     line-height:1.5;
     font-family:Dosis;
     max-width:330px;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -299,7 +306,7 @@ const CardHeader = styled.div`
 `
 
 const Price = styled.h2`
-    font-size: 3.04688rem !important;
+    font-size: 3.04688 rem;
     font-weight: 600;
     color: #191919 !important;
     letter-spacing: 0.5px;
@@ -307,6 +314,9 @@ const Price = styled.h2`
     margin-top:20px;
     line-height: 1.9;
     margin-bottom: 1rem;
+    @media (max-width: 576px) {
+        font-size:38px;
+    }
 `
 
 const CardBody = styled.div`

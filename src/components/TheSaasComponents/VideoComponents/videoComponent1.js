@@ -153,6 +153,13 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:8px;
+    font-weight:600;
+    @media (max-width: 768px) {
+        margin-top:32px;
+    }
+    @media (max-width: 576px) {
+        font-size:17.3px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -161,6 +168,12 @@ const DescriptionSection = styled.p`
     line-height: 1.9;
     color: rgba(255,255,255,0.85);
     font-family:Open Sans;
+    @media (max-width: 768px) {
+        margin-bottom:32px;
+    }
+    @media (max-width: 576px) {
+        font-size:13.1px;
+    }
 `
 
 
@@ -183,6 +196,10 @@ const BlogCard = styled.div`
 
 const ImageContainer = styled.div`
     position:relative;
+    min-height: 400px;
+    @media (max-width: 576px) {
+        min-height: 300px;
+    }
     :before {
         position: absolute;
         content: '';

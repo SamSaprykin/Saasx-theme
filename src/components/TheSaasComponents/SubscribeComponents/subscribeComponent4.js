@@ -122,6 +122,11 @@ const DescritptionSection =  styled.p`
     font-family:Open Sans;
     margin-bottom:0;
     text-align:left;
+    @media (max-width: 576px) {
+        font-size: 16px;
+        text-align:center;
+        margin-bottom:16px;
+    }
 `
 
 const StyledButton = styled.button`

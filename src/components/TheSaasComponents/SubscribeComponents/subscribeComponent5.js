@@ -127,6 +127,9 @@ const SectionDialog = styled.div`
     @media (min-width: 768px) {
         padding: 20px 24px;
     }
+    @media (max-width: 576px) {
+        padding: 1rem;
+    }
     form {
         display:flex;
         position:relative;
@@ -142,6 +145,11 @@ const HeaderDialog = styled.h3`
     font-weight:500;
     text-align:left;
     margin-bottom:48px;
+    @media (max-width: 576px) {
+        font-size: 21px;
+        text-align:center;
+        margin-bottom:40px;
+    }
 `
 const CtaText = styled.p`
     text-align:right;
@@ -174,6 +182,7 @@ const StyledButton = styled.button`
     font-size: 11px;
     padding: 8px 26px 6px;
     letter-spacing: 1.7px;
+    
 `
 const StyledInput = styled.input`
     border-left: 0;
@@ -198,6 +207,9 @@ const StyledInput = styled.input`
     font-size: .9375rem;
     :focus {
         color: rgba(255,255,255,0.8);
+    }
+    @media (max-width: 576px) {
+        font-size: .7375rem;
     }
 `
 

@@ -124,7 +124,11 @@ const StyledRow = styled.div`
         position:relative;
         height: calc(2.2em + .75rem + 2px);
         margin-top:5rem;
+        @media (max-width: 576px) {
+            margin-top:2rem;
+        }
     }
+    
 `
 
 const TitleSection = styled.h2`
@@ -168,6 +172,10 @@ const StyledButton = styled.button`
         font-size: 9px !important;
         margin-left: .75rem !important;
     }
+    @media (max-width: 576px) {
+        padding: 7px 18px 6px;
+        right:16px;
+    }
 `
 const StyledInput = styled.input`
     border-left: 0;
@@ -188,6 +196,9 @@ const StyledInput = styled.input`
     min-width: 0;
     margin-bottom: 0;
     width:100%;
+    @media (max-width: 576px) {
+        padding-left: 2.5rem;
+    }
 `
 
 const Prepand = styled.div`

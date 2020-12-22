@@ -91,6 +91,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -127,6 +131,9 @@ const SectionTitle = styled.h2`
     font-weight: 500;
     font-size: 2.10938rem;
     margin-bottom:8px;
+    @media (max-width: 576px) {
+        font-size:30px;
+    }
 `
 
 const SectionDescription = styled.p`
@@ -171,6 +178,9 @@ const AuthorInfo = styled.div`
 
 const AuthorWrapper = styled.div`
     display:flex;
+    @media (max-width: 576px) {
+        margin-bottom:3rem;
+    }
 `
 
 const AuthorDetails = styled.div`

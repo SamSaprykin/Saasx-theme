@@ -150,6 +150,12 @@ const Navbar = styled.div`
     justify-content: flex-end;
     padding-left: 0;
     margin-bottom: 0;
+    @media (max-width: 768px) {
+        margin-top:24px;
+    }
+    @media (max-width: 576px) {
+        justify-content: center;
+    }
 `
 
 const NavLink = styled(Link)`

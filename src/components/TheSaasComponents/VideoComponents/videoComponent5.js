@@ -171,6 +171,9 @@ const TitleSection = styled.h4`
     font-family:Dosis;
     line-height: 1.5;
     margin-bottom:8px;
+    @media (max-width: 576px) {
+        font-size:24px;
+    }
 `
 
 const DescriptionSection = styled.p`
@@ -179,6 +182,9 @@ const DescriptionSection = styled.p`
     font-weight: 300;
     line-height: 1.9;
     color: #757575;
+    @media (max-width: 576px) {
+        font-size:13px;
+    }
 `
 
 
@@ -295,23 +301,12 @@ const ButtonOpen  = styled.a`
     :hover {
         color:#926dde;
     }
-
+    @media (max-width: 576px) {
+        margin:20px auto;
+    }
 `
 
-const Media = styled.div`
-    display:flex;
-    margin-top: 3rem !important;
-    align-items:center;
-    cursor:pointer;
-`
 
-const CallToAction = styled.span`
-    color: #757575 !important;
-    text-transform: uppercase !important;
-    font-size:12.75px;
-    font-weight: 600;
-    font-family:Open Sans;
-`
 
 VideoComponent5.propTypes = {
   

@@ -72,6 +72,10 @@ const SectionBackground = styled.div`
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     background-color: #fafbfb;
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -113,7 +117,9 @@ const SectionTitle = styled.h2`
     font-size: 1.75781rem;
     line-height: 1.5;
     margin-bottom: 2.5rem;
-    
+    @media (max-width: 768px) {
+        font-size: 26px;
+    }
 `
 
 const SectionDescription = styled.p`

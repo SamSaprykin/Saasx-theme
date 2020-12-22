@@ -120,6 +120,10 @@ const SectionBackground = styled.div`
     margin: 30px 20px 100px;
     border: 1px solid #f5f6f7;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    @media (max-width: 768px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 `
 
 const Container = styled.div`
@@ -155,6 +159,7 @@ const StyledRow = styled.div`
     margin-left: -15px;
     text-align:center;
     justify-content:space-between;
+    
     hr {
         width: 5% !important;
         margin: 2rem auto;
@@ -171,6 +176,9 @@ const StyledRow = styled.div`
         justify-content:space-between;
         width:100%;
         align-items:center;
+        @media (max-width: 576px) {
+            flex-direction:column;
+        }
         .tab-list {
             display:flex;
             justify-content: center;

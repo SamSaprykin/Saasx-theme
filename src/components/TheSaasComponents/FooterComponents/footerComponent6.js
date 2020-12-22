@@ -127,8 +127,15 @@ const StyledRow = styled.div`
         text-align:left;
         padding-top: 15px;
         padding-bottom: 15px;
+        @media (max-width: 576px) {
+            text-align:center;
+        }
     }
-
+    .mt-5 {
+        @media (max-width: 576px) {
+            margin-top:1rem !important;
+        }
+    }
 `
 
 const Copyright = styled.p`
@@ -137,7 +144,10 @@ const Copyright = styled.p`
     line-height: 1.9;
     color: rgba(255,255,255,0.8);
     padding-top:20px;
-    text-align: center !important;
+    text-align: center ;
+    @media (max-width: 576px) {
+        margin-top:1rem !important;
+    }
 `
 
 const Navbar = styled.div`
@@ -146,6 +156,9 @@ const Navbar = styled.div`
     justify-content: flex-end;
     padding-left: 0;
     margin-bottom: 0;
+    @media (max-width: 576px) {
+        justify-content: center;
+    }
 `
 
 const NavLink = styled(Link)`
@@ -167,8 +180,11 @@ const NavLink = styled(Link)`
 
 const Social = styled.div`
 
-    text-align: left !important;
+    text-align: left ;
     color: #757575 !important;
+    @media (max-width: 576px) {
+        text-align:center;
+    }
 `
 
 const SocialLink = styled.a`
