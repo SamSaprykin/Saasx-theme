@@ -1,12 +1,7 @@
-import { Link } from "gatsby"
 import React from "react"
-import Img from "gatsby-image"
 import styled from "styled-components"
 
-
-
-
-const HeaderComponent5 = () => {
+const HeaderComponent5 = (props) => {
     
     return (
       <>

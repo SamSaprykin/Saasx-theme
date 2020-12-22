@@ -1,6 +1,5 @@
-import { Link } from "gatsby"
-import React, { useState } from "react"
-import Img from "gatsby-image"
+
+import React from "react"
 import Collapse from "rc-collapse"
 import styled from "styled-components"
 import "rc-collapse/assets/index.css"
@@ -35,23 +34,24 @@ const collapseData = [
 ]
 var Panel = Collapse.Panel
 
-const CareerComponent = () => {
+const CareerComponent = (props) => {
+    console.log(props.data)
     return (
       <WrapperSection>
         <BlockHeader>Block 1</BlockHeader>
 
         <SectionBackground>
             <Container>
-                <SubTitle>JOBS</SubTitle>
-                <SectionTitle>Open Positions</SectionTitle>
-                <SectionInfo>Following list displays our current required positions. This list will update regularly.</SectionInfo>
+                <SubTitle>{ props.data.careerSubhead } </SubTitle>
+                <SectionTitle> { props.data.careerTitle } </SectionTitle>
+                <SectionInfo> { props.data.careerDescritption }</SectionInfo>
                 <SectionSlider>
                     <Collapse 
                       accordion={true}
                       openMotion={motion}
                     >
                         {
-                            collapseData.map((panel,index) => {
+                            props.data.saasCareerItem.map((panel,index) => {
                               return (
                                   <Panel 
                                     header={
@@ -73,7 +73,7 @@ const CareerComponent = () => {
                                   >
                                     <PanelContent>
                                       <PanelText>
-                                        {panel.workDescription}
+                                        {panel.workDescription.workDescription}
                                       </PanelText>
                                       <PanelCta>
                                         <span>

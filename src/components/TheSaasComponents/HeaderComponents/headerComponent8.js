@@ -6,8 +6,7 @@ import Typing from 'react-typing-animation'
 
 
 
-const HeaderComponent8 = () => {
-    
+const HeaderComponent8 = (props) => {
     return (
       <>
         <BlockHeader>Block 8</BlockHeader>
@@ -16,7 +15,9 @@ const HeaderComponent8 = () => {
                 <StyledRow>
                     <div className="col-lg-8 mx-auto">
                         <TitleSection>
-                            <span class="space">Get A Job </span>
+                            <span class="space"> 
+                             { props.data.headerTitle } 
+                            </span>
                             <Typing speed={100} loop={true} cursorClassName="cursor">
                                 <TypingSpan> Startups.</TypingSpan>
                                 <Typing.Backspace count={10} />
@@ -28,9 +29,9 @@ const HeaderComponent8 = () => {
                                 <Typing.Backspace count={15} />
                             </Typing>
                         </TitleSection>
-                        <DescriptionSection>You have got the change to work and thrive with us. We are a small group of developers who wants to make a family!</DescriptionSection>
+                        <DescriptionSection> { props.data.headerDescritption } </DescriptionSection>
                         <hr />
-                        <CtaSection>open positions</CtaSection>
+                        <CtaSection>{ props.data.headerCta }</CtaSection>
                     </div>
                 </StyledRow>
             </Container>

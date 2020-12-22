@@ -162,10 +162,42 @@ exports.createPages = async ({ graphql, actions }) => {
         resolve()
       })
     })
+
+    const saasPage = new Promise((resolve, reject) => {
+      graphql(`
+        query {
+          allContentfulSaasPage {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+        
+        
+        result.data.allContentfulSaasPage.edges.forEach((edge, index) => {
+          createPage({
+            path: edge.node.slug,
+            component: path.resolve(`./src/templates/saas-page.js`),
+            context: {
+              slug: `${edge.node.slug}`,
+            },
+          })
+        })
+        resolve()
+      })
+    })
   
     return Promise.all([
       blogListingPage,
       blogPage,
-      contenfulPage
+      contenfulPage,
+      saasPage
     ])
   }
