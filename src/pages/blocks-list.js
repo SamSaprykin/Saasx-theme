@@ -10,7 +10,6 @@ const BlocsList = () => (
     <SEO title="Home" />
     <WrapperLinks>
         <Link to="/blog-components">Blog components</Link>
-        <Link to="/career-component">Career component</Link>
         <Link to="/contact-components">Contact components</Link>
         <Link to="/content-components">Content components</Link>
         <Link to="/counter-components">Counter components</Link>

@@ -28,7 +28,6 @@ const FeatureComponentList = ({cardData}) => {
             <FeatureComponent2 />
             <FeatureComponent3 />
             <FeatureComponent4 />
-            <FeatureComponent5 />
             <FeatureComponent6 />
             <FeatureComponent7 />
             <FeatureComponent8 />

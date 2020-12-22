@@ -9,7 +9,6 @@ import HeaderComponent4 from "./headerComponent4"
 import HeaderComponent5 from "./headerComponent5"
 import HeaderComponent6 from "./headerComponent6"
 import HeaderComponent7 from "./headerComponent7"
-import HeaderComponent8 from "./headerComponent8"
 import HeaderComponent9 from "./headerComponent9"
 
 
@@ -26,7 +25,6 @@ const HeaderComponentList = ({cardData}) => {
             <HeaderComponent5 />
             <HeaderComponent6 />
             <HeaderComponent7 />
-            <HeaderComponent8 />
             <HeaderComponent9 />
         </ComponentsWrapper>
     )
